@@ -1462,3 +1462,146 @@ h1, h2, h3 { color: #3F8285; }
     max-height: 76px;
   }
 }
+
+/* ------------------------------
+   About Apex final polish
+   ------------------------------ */
+
+.home-hero h1 {
+  font-size: clamp(1.9rem, 4.2vw, 3.35rem);
+  max-width: 850px;
+}
+
+.partner-logo-strip h2 {
+  font-size: 1.25rem;
+  color: #3F8285;
+}
+
+.partner-logo-list {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(120px, 1fr));
+  gap: 1rem;
+  align-items: stretch;
+  max-width: 1100px;
+  margin: 2rem auto 0;
+}
+
+.partner-logo-card {
+  min-height: 110px;
+  padding: 1rem;
+  border-radius: 18px;
+  background: #f5f8f5;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.07);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.partner-logo-card img {
+  display: block;
+  max-width: 100%;
+  max-height: 72px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+.partner-logo-card img[src*="logo-defra"] {
+  max-height: 88px;
+}
+
+.partner-logo-card img[src*="logo-plantone"] {
+  max-height: 86px;
+}
+
+.partner-logo-card img[src*="logo-woodland-trust"] {
+  max-height: 82px;
+}
+
+.partner-logo-card img[src*="logo-fundacao-principe"] {
+  max-height: 78px;
+}
+
+.credibility-number-text {
+  font-size: clamp(1.55rem, 3vw, 2.25rem);
+  line-height: 1.12;
+}
+
+.about-diagram-section {
+  padding-top: clamp(1.75rem, 4vw, 3rem);
+  padding-bottom: clamp(1.75rem, 4vw, 3rem);
+}
+
+.frontpage-diagram {
+  max-width: 760px;
+}
+
+.about-summary-section .services-link {
+  display: inline-block;
+  background: #ffffff;
+  padding: 0.85rem 1.25rem;
+  border-radius: 999px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.07);
+}
+
+.people-preview-section {
+  padding-top: clamp(3rem, 6vw, 5rem);
+}
+
+.people-preview-section h2 {
+  font-size: clamp(1.9rem, 4vw, 2.6rem);
+}
+
+@media (max-width: 950px) {
+  .partner-logo-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    max-width: 650px;
+  }
+
+  .partner-logo-card:last-child {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 640px) {
+  .home-hero h1 {
+    font-size: clamp(1.8rem, 8vw, 2.55rem);
+  }
+
+  .partner-logo-list {
+    grid-template-columns: 1fr;
+  }
+
+  .partner-logo-card {
+    min-height: 96px;
+  }
+
+  .partner-logo-card:last-child {
+    grid-column: auto;
+  }
+
+  .partner-logo-card img {
+    max-height: 64px;
+  }
+
+  .partner-logo-card img[src*="logo-defra"],
+  .partner-logo-card img[src*="logo-plantone"] {
+    max-height: 76px;
+  }
+
+  .partner-logo-card img[src*="logo-woodland-trust"] {
+    max-height: 72px;
+  }
+
+  .partner-logo-card img[src*="logo-fundacao-principe"] {
+    max-height: 70px;
+  }
+
+  .credibility-number-text {
+    font-size: clamp(1.45rem, 7vw, 2rem);
+  }
+
+  .about-summary-section .services-link {
+    border-radius: 18px;
+  }
+}
