@@ -1605,3 +1605,197 @@ h1, h2, h3 { color: #3F8285; }
     border-radius: 18px;
   }
 }
+
+/* ------------------------------
+   About Apex rhythm polish
+   ------------------------------ */
+
+.home-hero {
+  padding-top: clamp(2.6rem, 6vw, 5.2rem);
+  padding-bottom: clamp(2.8rem, 6vw, 5.4rem);
+}
+
+.home-hero h1 {
+  font-size: clamp(1.8rem, 4vw, 3.15rem);
+  max-width: 820px;
+}
+
+.home-hero-text {
+  max-width: 720px;
+  font-size: clamp(1rem, 1.65vw, 1.18rem);
+}
+
+.partner-logo-strip h2 {
+  margin-bottom: 0.25rem;
+  font-size: clamp(1.65rem, 3.4vw, 2.25rem);
+  color: #3F8285;
+}
+
+.partner-strip-intro {
+  margin: 0 auto;
+  color: #4f6465;
+  font-weight: 600;
+}
+
+.partner-logo-list {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(120px, 1fr));
+  gap: 1rem;
+  align-items: stretch;
+  max-width: 1100px;
+  margin: 2rem auto 0;
+}
+
+.partner-logo-card {
+  min-height: 110px;
+  padding: 1rem;
+  border-radius: 18px;
+  background: #f5f8f5;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.07);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.partner-logo-card img {
+  display: block;
+  max-width: 100%;
+  max-height: 72px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+.partner-logo-card img[src*="logo-defra"] {
+  max-height: 88px;
+}
+
+.partner-logo-card img[src*="logo-plantone"] {
+  max-height: 86px;
+}
+
+.partner-logo-card img[src*="logo-woodland-trust"] {
+  max-height: 82px;
+}
+
+.partner-logo-card img[src*="logo-fundacao-principe"] {
+  max-height: 78px;
+}
+
+.credibility-number-text {
+  font-size: clamp(1.45rem, 2.55vw, 2rem);
+  line-height: 1.12;
+}
+
+.about-diagram-section {
+  padding-top: clamp(1.75rem, 4vw, 3rem);
+  padding-bottom: clamp(1.75rem, 4vw, 3rem);
+}
+
+.frontpage-diagram {
+  max-width: 760px;
+}
+
+.about-summary-section {
+  padding-bottom: clamp(3rem, 6vw, 5rem);
+}
+
+.people-preview-section {
+  background: #ffffff;
+  padding-top: clamp(3rem, 6vw, 5rem);
+  padding-bottom: clamp(3rem, 6vw, 5rem);
+}
+
+.people-preview-section h2 {
+  font-size: clamp(1.9rem, 4vw, 2.6rem);
+  margin-top: 0;
+}
+
+.people-preview-section .section-intro {
+  max-width: 720px;
+  margin-bottom: 2.25rem;
+}
+
+.testimonial-link {
+  margin-top: 2rem;
+  margin-bottom: 0;
+}
+
+.final-cta-section {
+  background: #e4f4f5;
+  padding-top: clamp(2.75rem, 5vw, 4.5rem);
+  padding-bottom: clamp(2.75rem, 5vw, 4.5rem);
+}
+
+.final-cta-card {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: clamp(1.75rem, 4vw, 2.75rem);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.final-cta-card h2 {
+  margin-top: 0;
+}
+
+.final-cta-card p {
+  max-width: 640px;
+}
+
+@media (max-width: 950px) {
+  .partner-logo-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    max-width: 650px;
+  }
+
+  .partner-logo-card:last-child {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 640px) {
+  .home-hero h1 {
+    font-size: clamp(1.65rem, 7.2vw, 2.25rem);
+  }
+
+  .home-hero-text {
+    font-size: 1rem;
+  }
+
+  .partner-logo-list {
+    grid-template-columns: 1fr;
+  }
+
+  .partner-logo-card {
+    min-height: 96px;
+  }
+
+  .partner-logo-card:last-child {
+    grid-column: auto;
+  }
+
+  .partner-logo-card img {
+    max-height: 64px;
+  }
+
+  .partner-logo-card img[src*="logo-defra"],
+  .partner-logo-card img[src*="logo-plantone"] {
+    max-height: 76px;
+  }
+
+  .partner-logo-card img[src*="logo-woodland-trust"] {
+    max-height: 72px;
+  }
+
+  .partner-logo-card img[src*="logo-fundacao-principe"] {
+    max-height: 70px;
+  }
+
+  .credibility-number-text {
+    font-size: clamp(1.25rem, 6vw, 1.7rem);
+  }
+
+  .final-cta-card {
+    border-radius: 14px;
+  }
+}
