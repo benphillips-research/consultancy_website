@@ -2355,3 +2355,70 @@ h1, h2, h3 { color: #3F8285; }
     border-radius: 14px;
   }
 }
+
+/* ------------------------------
+   Services final polish
+   ------------------------------ */
+
+.services-hero h1 {
+  font-size: clamp(1.85rem, 4vw, 3.15rem);
+  max-width: 900px;
+}
+
+.services-hero-text {
+  max-width: 760px;
+  font-size: clamp(1rem, 1.7vw, 1.18rem);
+}
+
+.service-area-tag {
+  display: inline-block;
+  margin: 0 0 0.8rem;
+  padding: 0.28rem 0.7rem;
+  border-radius: 999px;
+  background: #ffffff;
+  color: #3F8285;
+  font-size: 0.88rem;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+}
+
+.service-area-icon {
+  display: none !important;
+}
+
+.service-area-card h3 {
+  margin-bottom: 0.9rem;
+}
+
+.service-area-card li {
+  line-height: 1.6;
+}
+
+.services-intro-section p {
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.service-detail-section .sidepicture-text p,
+.service-detail-section .sidepicture-text li {
+  line-height: 1.7;
+}
+
+.service-detail-section .sidepicture-text ul {
+  margin-top: 0.75rem;
+}
+
+.other-services-section p {
+  max-width: 680px;
+}
+
+@media (max-width: 640px) {
+  .services-hero h1 {
+    font-size: clamp(1.55rem, 7vw, 2.2rem);
+  }
+
+  .services-hero-text {
+    font-size: 0.98rem;
+  }
+}
