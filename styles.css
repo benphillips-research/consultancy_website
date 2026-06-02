@@ -2882,3 +2882,8 @@ h1, h2, h3 { color: #3F8285; }
   color: #3F8285;
   font-weight: 800;
 }
+
+/* Restore homepage section rhythm after reordering */
+.home-main .credibility-section {
+  background: #ffffff;
+}
