@@ -2839,3 +2839,24 @@ h1, h2, h3 { color: #3F8285; }
     margin-right: 0;
   }
 }
+
+/* Make homepage overview card text more scannable */
+
+.home-main .overview-mini-list {
+  display: grid;
+  gap: 0.65rem;
+  text-align: left;
+}
+
+.home-main .overview-mini-list p {
+  margin: 0;
+  padding: 0.68rem 0.75rem;
+  border-radius: 12px;
+  background: #f5f8f5;
+  line-height: 1.45;
+  color: #3d3d3d;
+}
+
+.home-main .overview-mini-list strong {
+  color: #3F8285;
+}
