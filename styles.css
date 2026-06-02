@@ -1979,3 +1979,115 @@ footer {
   line-height: 1.12;
   color: #2e2e2e;
 }
+
+/* ------------------------------
+   Publications top section polish
+   ------------------------------ */
+
+.publication-stats-section {
+  background: #ffffff;
+}
+
+.publication-stats-grid {
+  align-items: stretch;
+}
+
+.publication-stat-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background: #e4f4f5;
+  border: 1px solid rgba(63, 130, 133, 0.16);
+  border-radius: 18px;
+  padding: 1.75rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+
+.publication-stat-card .credibility-number,
+.publication-stat-label {
+  min-height: 3.35rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 0 0.75rem !important;
+  color: #3F8285;
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1;
+  font-weight: 800;
+  text-align: center;
+}
+
+.publication-stat-label {
+  font-size: clamp(1.35rem, 2.6vw, 2rem);
+  line-height: 1.08;
+}
+
+.publication-stat-card h3 {
+  min-height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 0 0.75rem;
+  color: #2e2e2e;
+  text-align: center;
+  line-height: 1.25;
+}
+
+.publication-stat-card p:last-child {
+  margin: 0;
+  color: #2e2e2e;
+  line-height: 1.6;
+}
+
+.publication-themes-section {
+  background: #e4f4f5;
+}
+
+.publication-theme-grid {
+  align-items: stretch;
+}
+
+.publication-theme-card {
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  border: 1px solid rgba(63, 130, 133, 0.16);
+  border-radius: 18px;
+  padding: 1.6rem 1.45rem 1.45rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.publication-theme-bubble {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  align-self: flex-start;
+  min-height: 2.25rem;
+  margin: 0 0 1rem;
+  padding: 0.35rem 0.85rem;
+  border-radius: 999px;
+  background: #e4f4f5;
+  color: #3F8285;
+  font-size: 0.95rem;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  line-height: 1.25;
+}
+
+.publication-theme-card p {
+  margin: 0;
+  color: #2e2e2e;
+  line-height: 1.6;
+}
+
+@media (max-width: 640px) {
+  .publication-stat-card .credibility-number,
+  .publication-stat-label {
+    min-height: 0;
+  }
+
+  .publication-stat-card h3 {
+    min-height: 0;
+  }
+}
