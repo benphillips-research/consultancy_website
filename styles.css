@@ -2700,3 +2700,10 @@ h1, h2, h3 { color: #3F8285; }
     font-size: 0.82rem;
   }
 }
+
+/* Slightly reduce the two proof-section headings */
+.home-main .partner-logo-strip h2.home-section-heading,
+.home-main .credibility-section h2.home-section-heading {
+  font-size: clamp(1.45rem, 2.7vw, 1.85rem);
+  line-height: 1.18;
+}
