@@ -1747,3 +1747,222 @@ footer {
   line-height: 1.08;
   color: #2e2e2e;
 }
+
+/* ------------------------------
+   Publications page final polish
+   ------------------------------ */
+
+.publications-main > section {
+  max-width: none;
+  margin: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.publications-hero {
+  background: linear-gradient(180deg, #e4f4f5 0%, #f5f8f5 100%);
+  padding: clamp(2.75rem, 6vw, 5rem) 1.5rem;
+}
+
+.publications-hero h1 {
+  max-width: 900px;
+  margin: 0 auto 1.25rem;
+  font-size: clamp(1.9rem, 4.2vw, 3.35rem);
+  line-height: 1.08;
+  color: #2e2e2e;
+}
+
+.publications-hero-text {
+  max-width: 780px;
+  margin: 0 auto;
+  font-size: clamp(1.05rem, 2vw, 1.25rem);
+  color: #3b3b3b;
+}
+
+.publication-stats-section {
+  background: #ffffff;
+  padding: clamp(2.5rem, 5vw, 4rem) 1rem;
+}
+
+.publication-stats-section h2,
+.publication-themes-section h2,
+.publications-list-intro h2,
+.publications-cta-section h2 {
+  margin-top: 0;
+}
+
+.publication-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5rem;
+  max-width: 1100px;
+  margin: 2rem auto 0;
+}
+
+.publication-stat-card {
+  background: #e4f4f5;
+  border: 1px solid rgba(63, 130, 133, 0.16);
+  border-radius: 18px;
+  padding: 1.75rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  text-align: left;
+}
+
+.publication-stat-card h3 {
+  margin-top: 0;
+  text-align: center;
+}
+
+.publication-stat-card p {
+  margin-bottom: 0;
+}
+
+.publication-themes-section {
+  background: #e4f4f5;
+  padding: clamp(2.5rem, 5vw, 4rem) 1rem;
+}
+
+.publication-theme-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5rem;
+  max-width: 1100px;
+  margin: 2rem auto 0;
+}
+
+.publication-theme-card {
+  background: #ffffff;
+  border: 1px solid rgba(63, 130, 133, 0.16);
+  border-radius: 18px;
+  padding: 1.55rem 1.35rem 1.35rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  text-align: left;
+}
+
+.publication-theme-bubble {
+  display: inline-block;
+  margin: 0 0 1rem;
+  padding: 0.35rem 0.85rem;
+  border-radius: 999px;
+  background: #e4f4f5;
+  color: #3F8285;
+  font-size: 0.95rem;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  line-height: 1.3;
+}
+
+.publication-theme-card p {
+  margin: 0;
+  line-height: 1.65;
+  color: #2e2e2e;
+}
+
+.publications-list-intro {
+  background: #ffffff;
+  padding: clamp(2rem, 4vw, 3rem) 1rem;
+}
+
+.publications-list-intro p {
+  max-width: 680px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.publication-category-section {
+  background: #e4f4f5;
+  padding: clamp(1.5rem, 3vw, 2.5rem) 1rem;
+}
+
+.publication-category-section:nth-of-type(even) {
+  background: #ffffff;
+}
+
+.publication-category-section .publications-box {
+  max-width: 1000px;
+  margin: 0 auto;
+  background: #ffffff;
+  border: 1px solid rgba(63, 130, 133, 0.12);
+  border-radius: 18px;
+  padding: clamp(1.5rem, 3vw, 2rem);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.publication-category-section .publications-box h2 {
+  margin-top: 0;
+  color: #2e2e2e;
+}
+
+.publication-list {
+  padding-left: 1.25rem;
+  margin: 1.5rem 0 0;
+}
+
+.publication-list li {
+  margin-bottom: 0.95rem;
+}
+
+.publication-list li:last-child {
+  margin-bottom: 0;
+}
+
+.publication-list a {
+  display: inline-block;
+  margin-left: 0.2rem;
+  color: #3F8285;
+  font-weight: 800;
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 0.16em;
+}
+
+.publication-list a:hover {
+  color: #2e2e2e;
+}
+
+.publications-cta-section {
+  background: #e4f4f5;
+  padding: clamp(2.5rem, 5vw, 4rem) 1rem;
+}
+
+.publications-cta-card {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: clamp(1.75rem, 4vw, 2.5rem);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.publications-cta-card p {
+  max-width: 680px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 900px) {
+  .publication-stats-grid,
+  .publication-theme-grid {
+    grid-template-columns: 1fr;
+    max-width: 650px;
+  }
+}
+
+@media (max-width: 640px) {
+  .publications-hero {
+    padding-top: 2.5rem;
+  }
+
+  .publications-hero h1 {
+    font-size: clamp(1.9rem, 8.5vw, 2.55rem);
+  }
+
+  .publication-stat-card,
+  .publication-theme-card,
+  .publication-category-section .publications-box,
+  .publications-cta-card {
+    border-radius: 14px;
+    padding: 1.25rem;
+  }
+
+  .publication-list {
+    padding-left: 1rem;
+  }
+}
