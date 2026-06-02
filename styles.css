@@ -2521,3 +2521,55 @@ h1, h2, h3 { color: #3F8285; }
     max-width: 160px;
   }
 }
+
+/* ------------------------------
+   Publications final polish
+   ------------------------------ */
+
+.publications-hero h1 {
+  font-size: clamp(1.85rem, 4vw, 3.15rem);
+  max-width: 900px;
+}
+
+.publications-hero-text {
+  max-width: 760px;
+  font-size: clamp(1rem, 1.7vw, 1.18rem);
+}
+
+.publication-stat-card h3,
+.publication-theme-card h3 {
+  color: #2e2e2e;
+}
+
+.publication-stat-card p,
+.publication-theme-card p,
+.publication-list li {
+  line-height: 1.7;
+}
+
+.publication-theme-grid {
+  align-items: stretch;
+}
+
+.publication-list {
+  padding-left: 1.2rem;
+}
+
+.publication-list a {
+  display: inline-block;
+  margin-left: 0.25rem;
+}
+
+.publications-cta-section p {
+  max-width: 660px;
+}
+
+@media (max-width: 640px) {
+  .publications-hero h1 {
+    font-size: clamp(1.55rem, 7vw, 2.2rem);
+  }
+
+  .publications-hero-text {
+    font-size: 0.98rem;
+  }
+}
