@@ -2637,3 +2637,9 @@ h1, h2, h3 { color: #3F8285; }
     border-radius: 14px;
   }
 }
+
+.credibility-number.credibility-number-text {
+  font-size: clamp(1.45rem, 2.6vw, 2rem);
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+}
