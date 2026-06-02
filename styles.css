@@ -1966,3 +1966,16 @@ footer {
     padding-left: 1rem;
   }
 }
+
+/* Slightly smaller, consistent hero heading size across main pages */
+.home-hero h1,
+.services-hero h1,
+.testimonials-hero h1,
+.publications-hero h1,
+.contact-hero h1 {
+  max-width: 900px;
+  margin: 0 auto 1.25rem;
+  font-size: clamp(1.75rem, 3.5vw, 2.85rem);
+  line-height: 1.12;
+  color: #2e2e2e;
+}
