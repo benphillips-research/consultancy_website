@@ -2644,9 +2644,8 @@ h1, h2, h3 { color: #3F8285; }
   letter-spacing: -0.02em;
 }
 
-/* Make text-based credibility metric more prominent */
 .credibility-number.credibility-number-text {
-  font-size: clamp(1.9rem, 3.8vw, 3rem);
-  line-height: 0.98;
-  letter-spacing: -0.04em;
+  font-size: clamp(1.75rem, 3.4vw, 2.7rem);
+  line-height: 1;
+  letter-spacing: -0.035em;
 }
