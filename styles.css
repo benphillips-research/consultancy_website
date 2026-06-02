@@ -2887,3 +2887,12 @@ h1, h2, h3 { color: #3F8285; }
 .home-main .credibility-section {
   background: #ffffff;
 }
+
+/* Restore homepage colour rhythm after moving the image */
+.home-main .home-photo-section {
+  background: #ffffff;
+}
+
+.home-main .credibility-section {
+  background: #f5f8f5;
+}
