@@ -1428,3 +1428,17 @@ footer {
     padding-left: 1rem;
   }
 }
+
+/* Services page section rhythm fix */
+.services-intro-section {
+  background: #ffffff;
+}
+
+.services-main .service-detail-section {
+  background: #e4f4f5;
+}
+
+.services-main .service-detail-section:nth-of-type(4),
+.services-main .service-detail-section:nth-of-type(6) {
+  background: #ffffff;
+}
