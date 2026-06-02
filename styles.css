@@ -2353,3 +2353,24 @@ footer {
   padding: clamp(1.75rem, 4vw, 2.5rem);
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
 }
+
+/* Testimonials final CTA: make it distinct from testimonial list above */
+
+.testimonials-list-section {
+  background: #e4f4f5;
+}
+
+.testimonials-cta-section {
+  background: #ffffff !important;
+  padding: clamp(2.5rem, 5vw, 4rem) 1rem;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.testimonials-cta-card {
+  background: #e4f4f5;
+  border: 1px solid rgba(63, 130, 133, 0.16);
+  border-radius: 18px;
+  padding: clamp(1.75rem, 4vw, 2.5rem);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
