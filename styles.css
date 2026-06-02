@@ -2422,3 +2422,102 @@ h1, h2, h3 { color: #3F8285; }
     font-size: 0.98rem;
   }
 }
+
+/* ------------------------------
+   Testimonials final polish
+   ------------------------------ */
+
+.testimonials-hero h1 {
+  font-size: clamp(1.85rem, 4vw, 3.15rem);
+  max-width: 900px;
+}
+
+.testimonials-hero-text {
+  max-width: 760px;
+  font-size: clamp(1rem, 1.7vw, 1.18rem);
+}
+
+.testimonial-proof-card h3 {
+  color: #2e2e2e;
+}
+
+.testimonial-proof-card p {
+  line-height: 1.7;
+}
+
+.testimonials-page-grid {
+  align-items: stretch;
+}
+
+.testimonial-page-card {
+  gap: 1rem;
+}
+
+.testimonial-logo-wrap {
+  min-height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 0.35rem;
+}
+
+.testimonial-logo {
+  display: block;
+  max-width: 180px;
+  max-height: 70px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+.testimonial-logo[src*="logo-woodland-trust"] {
+  max-height: 76px;
+}
+
+.testimonial-logo[src*="logo-fundacao-principe"] {
+  max-height: 72px;
+}
+
+.testimonial-page-card p {
+  line-height: 1.7;
+}
+
+.testimonial-page-card footer strong {
+  font-size: 1rem;
+}
+
+.testimonial-page-card footer span {
+  line-height: 1.4;
+}
+
+.testimonials-image-copy p {
+  line-height: 1.7;
+}
+
+@media (max-width: 900px) {
+  .testimonial-logo-wrap {
+    justify-content: center;
+  }
+
+  .testimonial-page-card {
+    text-align: center;
+  }
+
+  .testimonial-page-card footer {
+    text-align: center;
+  }
+}
+
+@media (max-width: 640px) {
+  .testimonials-hero h1 {
+    font-size: clamp(1.55rem, 7vw, 2.2rem);
+  }
+
+  .testimonials-hero-text {
+    font-size: 0.98rem;
+  }
+
+  .testimonial-logo {
+    max-width: 160px;
+  }
+}
