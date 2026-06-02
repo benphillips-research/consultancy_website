@@ -1725,3 +1725,13 @@ footer {
   line-height: 1.65;
   color: #2e2e2e;
 }
+
+/* Testimonials: quote attribution hierarchy */
+
+.testimonial-page-card footer strong {
+  color: #2e2e2e;
+}
+
+.testimonial-page-card footer span {
+  color: #4f6465;
+}
