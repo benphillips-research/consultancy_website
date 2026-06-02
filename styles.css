@@ -2896,3 +2896,69 @@ h1, h2, h3 { color: #3F8285; }
 .home-main .credibility-section {
   background: #f5f8f5;
 }
+
+/* Services overview cards, aligned with homepage card system */
+
+.services-overview-content {
+  max-width: 1050px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.services-overview-lead {
+  font-size: clamp(1.02rem, 1.75vw, 1.18rem);
+  color: #3d3d3d;
+  max-width: 720px;
+  margin: 0 auto 1.75rem;
+}
+
+.service-area-card {
+  position: relative;
+  text-align: left;
+  padding: 1.55rem 1.35rem 1.35rem;
+  border: 1px solid rgba(63, 130, 133, 0.16);
+  overflow: hidden;
+}
+
+.service-area-card::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 5px;
+  background: #3F8285;
+}
+
+.service-area-bubble {
+  display: table;
+  margin: 0 auto 1rem;
+  padding: 0.32rem 0.78rem;
+  border-radius: 999px;
+  background: #ffffff;
+  color: #3F8285;
+  font-size: 0.86rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  line-height: 1.3;
+  text-align: center;
+}
+
+.service-mini-list {
+  display: grid;
+  gap: 0.65rem;
+  text-align: left;
+}
+
+.service-mini-list p {
+  margin: 0;
+  padding: 0.68rem 0.75rem;
+  border-radius: 12px;
+  background: #f5f8f5;
+  line-height: 1.45;
+  color: #3d3d3d;
+}
+
+.service-mini-list strong {
+  color: #3F8285;
+  font-weight: 800;
+}
