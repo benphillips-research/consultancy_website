@@ -2952,3 +2952,44 @@ html {
 .contact-reassurance-section {
   background: var(--apex-bg);
 }
+
+/* Replace pale blue full-width section backgrounds with the softer homepage background,
+   while preserving the existing white / coloured alternation */
+
+.services-main .service-detail-section {
+  background: var(--apex-bg);
+}
+
+.services-main .service-detail-section:nth-of-type(4),
+.services-main .service-detail-section:nth-of-type(6) {
+  background: #ffffff;
+}
+
+.testimonials-list-section {
+  background: var(--apex-bg);
+}
+
+.testimonials-cta-section {
+  background: #ffffff !important;
+}
+
+.publication-themes-section,
+.publications-cta-section {
+  background: var(--apex-bg);
+}
+
+.publication-category-section {
+  background: var(--apex-bg);
+}
+
+.publication-category-section:nth-of-type(even) {
+  background: #ffffff;
+}
+
+.contact-guidance-section {
+  background: var(--apex-bg);
+}
+
+.home-earth-section {
+  background: var(--apex-bg);
+}
