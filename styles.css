@@ -2433,7 +2433,7 @@ footer a {
 
 .home-photo-grid {
   display: grid;
-  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   grid-template-rows: repeat(2, minmax(180px, 1fr));
   gap: 1rem;
 }
