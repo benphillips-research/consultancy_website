@@ -2871,3 +2871,10 @@ footer a {
   border-radius: 18px;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
 }
+
+/* Testimonials page Partner feedback section */
+
+.testimonial-proof-section {
+  background: #ffffff;
+  padding: clamp(2.5rem, 5vw, 4rem) 1rem clamp(1.5rem, 3vw, 2.25rem);
+}
