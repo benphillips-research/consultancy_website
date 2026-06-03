@@ -2993,3 +2993,13 @@ html {
 .home-earth-section {
   background: var(--apex-bg);
 }
+
+/* Keep these visual / intro sections white */
+
+.publications-list-intro {
+  background: #ffffff;
+}
+
+.testimonials-photo-section {
+  background: #ffffff;
+}
