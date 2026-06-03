@@ -2918,3 +2918,17 @@ html {
 .publication-theme-bubble a:hover {
   text-decoration: underline;
 }
+
+.testimonial-card footer strong {
+  display: block;
+  color: var(--apex-blue);
+  font-size: 1rem;
+}
+
+.testimonial-card footer span {
+  display: block;
+  margin-top: 0.2rem;
+  color: var(--apex-muted-blue);
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
