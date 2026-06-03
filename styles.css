@@ -2973,8 +2973,7 @@ html {
   background: #ffffff !important;
 }
 
-.publication-themes-section,
-.publications-cta-section {
+.publication-themes-section {
   background: var(--apex-bg);
 }
 
@@ -3002,4 +3001,11 @@ html {
 
 .testimonials-photo-section {
   background: #ffffff;
+}
+
+/* Keep the Publications final CTA visually distinct from the section above */
+
+.publications-cta-section.site-cta-section {
+  background: linear-gradient(180deg, #ffffff 0%, #eef6ef 100%);
+  border-top: 1px solid rgba(63, 130, 133, 0.14);
 }
