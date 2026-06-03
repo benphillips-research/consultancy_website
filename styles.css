@@ -2389,3 +2389,35 @@ footer {
 .partner-logo-list {
   margin-top: 0;
 }
+
+/* Site footer: always separate from final page section */
+
+footer {
+  background: #3F8285;
+  color: #ffffff;
+  text-align: center;
+  padding: 1.25rem 1rem;
+  font-size: 0.9rem;
+}
+
+footer p {
+  margin: 0.35rem 0;
+}
+
+footer a {
+  color: #ffffff;
+}
+
+.footer-contact {
+  margin: 0 0 0.5rem;
+}
+
+.footer-icon {
+  opacity: 0.95;
+  filter: brightness(0) invert(1);
+}
+
+.footer-icon:hover {
+  opacity: 1;
+  filter: brightness(0) invert(1);
+}
