@@ -2421,3 +2421,34 @@ footer a {
   opacity: 1;
   filter: brightness(0) invert(1);
 }
+
+/* Footer: quiet but clear site-wide separation */
+
+footer {
+  background: #ffffff;
+  border-top: 2px solid rgba(63, 130, 133, 0.28);
+  color: #2e2e2e;
+  text-align: center;
+  padding: 1.25rem 1rem;
+  font-size: 0.9rem;
+}
+
+footer p {
+  margin: 0.35rem 0;
+}
+
+footer a {
+  color: #3F8285;
+}
+
+.footer-contact {
+  margin: 0 0 0.5rem;
+}
+
+.footer-icon {
+  opacity: 0.85;
+}
+
+.footer-icon:hover {
+  opacity: 1;
+}
