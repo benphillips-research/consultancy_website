@@ -2790,3 +2790,34 @@ footer a {
 .testimonial-preview-section {
   background: #eef6ef;
 }
+
+/* Homepage Earth image break */
+
+.home-earth-section {
+  background: #ffffff;
+  padding: clamp(2.5rem, 5vw, 4rem) 1rem;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.home-earth-image {
+  display: block;
+  width: 100%;
+  height: clamp(260px, 38vw, 460px);
+  object-fit: cover;
+  object-position: center;
+  border-radius: 18px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+@media (max-width: 700px) {
+  .home-earth-image {
+    height: auto;
+  }
+}
+
+/* Homepage testimonial preview */
+
+.testimonial-preview-section {
+  background: #ffffff;
+}
