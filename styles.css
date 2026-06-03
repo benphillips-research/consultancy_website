@@ -2708,3 +2708,29 @@ footer a {
     font-size: clamp(1.9rem, 8.5vw, 2.55rem);
   }
 }
+
+/* Services overview card icons */
+
+.service-area-icon {
+  display: block;
+  width: 72px;
+  height: 72px;
+  object-fit: contain;
+  margin: 0 auto 1rem;
+}
+
+.service-area-card {
+  text-align: left;
+}
+
+.service-area-card .service-area-icon + .service-area-bubble {
+  margin-top: 0;
+}
+
+@media (max-width: 640px) {
+  .service-area-icon {
+    width: 64px;
+    height: 64px;
+    margin-bottom: 0.85rem;
+  }
+}
