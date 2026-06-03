@@ -2934,7 +2934,7 @@ html {
 }
 
 .home-earth-section {
-  background: #ffffff;
+  background: var(--apex-bg);
   padding: 0 1rem clamp(2.5rem, 5vw, 4rem);
 }
 
