@@ -533,7 +533,7 @@ footer {
 }
 
 .testimonial-preview-section {
-  background: var(--apex-bg);
+  background: #ffffff;
 }
 
 .testimonial-card {
@@ -2738,7 +2738,7 @@ footer a {
 /* Homepage Earth image break */
 
 .home-earth-section {
-  background: #ffffff;
+  background: #e4f4f5;
   padding: clamp(2.5rem, 5vw, 4rem) 1rem;
   border-radius: 0;
   box-shadow: none;
