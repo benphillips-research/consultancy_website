@@ -2942,3 +2942,37 @@ html {
   margin-top: 0;
 }
 
+/* Softer section backgrounds across inner pages */
+
+.services-intro-section,
+.service-detail-section,
+.other-services-section,
+.testimonials-list-section,
+.publication-themes-section,
+.publication-category-section,
+.contact-options-section {
+  background: var(--apex-bg);
+}
+
+.service-detail-section:nth-of-type(odd),
+.publication-category-section:nth-of-type(even) {
+  background: var(--apex-bg);
+}
+
+.testimonial-proof-section,
+.publication-stats-section {
+  background: #ffffff;
+}
+
+.testimonials-photo-section {
+  background: var(--apex-bg);
+  padding-top: 0;
+}
+
+.publications-list-intro,
+.publications-cta-section,
+.testimonials-cta-section,
+.contact-reassurance-section,
+.final-cta-section {
+  background: var(--apex-bg);
+}
