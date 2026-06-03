@@ -2932,3 +2932,13 @@ html {
   font-size: 0.95rem;
   line-height: 1.4;
 }
+
+.home-earth-section {
+  background: #ffffff;
+  padding: 0 1rem clamp(2.5rem, 5vw, 4rem);
+}
+
+.home-earth-section .container-lg {
+  margin-top: 0;
+}
+
