@@ -2850,3 +2850,24 @@ footer a {
     height: auto;
   }
 }
+
+/* Testimonials page photo: keep close to Partner feedback section */
+
+.testimonials-photo-section {
+  background: #ffffff;
+  padding: 0 1rem clamp(2.5rem, 5vw, 4rem);
+}
+
+.testimonials-photo-section .container-lg {
+  margin-top: 0;
+}
+
+.testimonials-wide-photo {
+  display: block;
+  width: 100%;
+  height: clamp(260px, 40vw, 500px);
+  object-fit: cover;
+  object-position: center;
+  border-radius: 18px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
