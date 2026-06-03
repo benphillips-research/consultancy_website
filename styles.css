@@ -2713,8 +2713,8 @@ footer a {
 
 .service-area-icon {
   display: block;
-  width: 72px;
-  height: 72px;
+  width: 92px;
+  height: 92px;
   object-fit: contain;
   margin: 0 auto 1rem;
 }
@@ -2729,8 +2729,8 @@ footer a {
 
 @media (max-width: 640px) {
   .service-area-icon {
-    width: 64px;
-    height: 64px;
+    width: 76px;
+    height: 76px;
     margin-bottom: 0.85rem;
   }
 }
@@ -2759,3 +2759,5 @@ footer a {
     height: auto;
   }
 }
+
+
