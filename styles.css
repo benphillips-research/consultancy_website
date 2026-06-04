@@ -3112,3 +3112,30 @@ html {
   background: #ffffff;
   padding-top: clamp(1.25rem, 2.5vw, 2rem);
 }
+
+/* Testimonials: section rhythm */
+
+.testimonial-proof-section {
+  background: #ffffff;
+  padding-bottom: clamp(0.75rem, 1.5vw, 1.25rem);
+}
+
+.testimonials-photo-section {
+  background: #ffffff;
+  padding: 0 1rem clamp(1.25rem, 2.5vw, 2rem);
+}
+
+.testimonials-photo-section .container-lg {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.testimonials-list-section {
+  background: var(--apex-bg);
+  padding-top: clamp(2rem, 4vw, 3rem);
+}
+
+.testimonials-cta-section.site-cta-section {
+  background: linear-gradient(180deg, #ffffff 0%, #eef6ef 100%);
+  border-top: 1px solid rgba(63, 130, 133, 0.14);
+}
