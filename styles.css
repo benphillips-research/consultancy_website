@@ -3026,3 +3026,25 @@ html {
   border-radius: 18px;
   box-shadow: var(--card-shadow);
 }
+
+/* Homepage hero Earth image strip */
+
+.home-hero-visual {
+  background: var(--apex-bg);
+  padding: 0 1rem clamp(2rem, 4vw, 3rem);
+}
+
+.home-hero-visual .container-lg {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.home-hero-visual-image {
+  display: block;
+  width: 100%;
+  height: clamp(150px, 18vw, 240px);
+  object-fit: cover;
+  object-position: center;
+  border-radius: 18px;
+  box-shadow: var(--card-shadow);
+}
