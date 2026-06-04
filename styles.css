@@ -3068,3 +3068,25 @@ html {
   background: var(--apex-bg);
   padding-top: clamp(1.25rem, 2.5vw, 2rem);
 }
+
+/* Testimonials: make partner feedback, image and testimonial cards one visual section */
+
+.testimonial-proof-section {
+  background: var(--apex-bg);
+  padding-bottom: clamp(1.25rem, 2.5vw, 2rem);
+}
+
+.testimonials-photo-section {
+  background: var(--apex-bg);
+  padding: 0 1rem 0;
+}
+
+.testimonials-photo-section .container-lg {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.testimonials-list-section {
+  background: var(--apex-bg);
+  padding-top: clamp(1.25rem, 2.5vw, 2rem);
+}
