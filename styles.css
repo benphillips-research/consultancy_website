@@ -3009,3 +3009,23 @@ html {
   background: linear-gradient(180deg, #ffffff 0%, #eef6ef 100%);
   border-top: 1px solid rgba(63, 130, 133, 0.14);
 }
+
+.home-hero-visual {
+  background: var(--apex-bg);
+  padding: 0 1rem clamp(2rem, 4vw, 3rem);
+}
+
+.home-hero-visual .container-lg {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.home-hero-visual-image {
+  display: block;
+  width: 100%;
+  height: clamp(170px, 22vw, 300px);
+  object-fit: cover;
+  object-position: center;
+  border-radius: 18px;
+  box-shadow: var(--card-shadow);
+}
