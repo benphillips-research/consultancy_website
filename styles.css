@@ -3052,3 +3052,19 @@ html {
 .home-hero-visual-image {
   object-position: right center;
 }
+
+/* Testimonials: make footprints image and testimonial cards feel like one section */
+
+.testimonials-photo-section {
+  background: var(--apex-bg);
+  padding: clamp(2rem, 4vw, 3rem) 1rem 0;
+}
+
+.testimonials-photo-section .container-lg {
+  margin-bottom: 0;
+}
+
+.testimonials-list-section {
+  background: var(--apex-bg);
+  padding-top: clamp(1.25rem, 2.5vw, 2rem);
+}
