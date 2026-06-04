@@ -3048,3 +3048,7 @@ html {
   border-radius: 18px;
   box-shadow: var(--card-shadow);
 }
+
+.home-hero-visual-image {
+  object-position: right center;
+}
