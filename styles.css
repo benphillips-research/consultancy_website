@@ -2862,7 +2862,7 @@ footer a {
 .testimonials-wide-photo {
   display: block;
   width: 100%;
-  height: clamp(260px, 40vw, 500px);
+  height: clamp(220px, 32vw, 400px);
   object-fit: cover;
   object-position: center;
   border-radius: 18px;
