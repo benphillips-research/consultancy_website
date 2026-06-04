@@ -2434,7 +2434,7 @@ footer a {
 .home-photo-grid {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-  grid-template-rows: repeat(2, 145px);
+  grid-template-rows: repeat(2, 150px);
   gap: 1rem;
 }
 
