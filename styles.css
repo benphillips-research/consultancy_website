@@ -2426,7 +2426,7 @@ footer a {
 
 .home-photo-section {
   background: #ffffff;
-  padding: clamp(2.5rem, 5vw, 4rem) 1rem;
+  padding: clamp(2rem, 4vw, 3rem) 1rem;
   border-radius: 0;
   box-shadow: none;
 }
@@ -2434,14 +2434,13 @@ footer a {
 .home-photo-grid {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-  grid-template-rows: repeat(2, minmax(180px, 1fr));
+  grid-template-rows: repeat(2, 145px);
   gap: 1rem;
 }
 
 .home-photo-grid .home-photo {
   width: 100%;
   height: 100%;
-  min-height: 145px;
   object-fit: cover;
   border-radius: 18px;
   display: block;
@@ -2450,7 +2449,6 @@ footer a {
 
 .home-photo-grid .home-photo-large {
   grid-row: span 2;
-  min-height: 305px;
 }
 
 @media (max-width: 800px) {
@@ -2461,7 +2459,6 @@ footer a {
 
   .home-photo-grid .home-photo,
   .home-photo-grid .home-photo-large {
-    min-height: 0;
     height: auto;
     grid-row: auto;
   }
