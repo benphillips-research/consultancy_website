@@ -755,19 +755,41 @@ footer a { color: #ffffff; }
   padding-bottom: clamp(0.75rem, 1.5vw, 1.25rem);
 }
 
+.testimonial-proof-card {
+  position: relative;
+  overflow: hidden;
+  background: #ffffff;
+  border: 1px solid var(--apex-border);
+  border-radius: var(--radius-card);
+  padding: 1.75rem 1.45rem 1.55rem;
+  box-shadow: var(--card-shadow);
+  text-align: left;
+}
+
+.testimonial-proof-card::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 5px;
+  background: var(--apex-blue);
+}
+
 .testimonial-proof-bubble {
   display: block;
   margin: 0 0 1rem;
-  color: var(--apex-blue);
+  color: var(--apex-text);
+  font-size: clamp(1.02rem, 1.5vw, 1.14rem);
+  line-height: 1.25;
   text-align: center;
 }
 
 .testimonial-proof-card p {
   margin: 0;
-  padding: 0;
-  background: transparent;
-  color: var(--apex-text);
-  line-height: 1.65;
+  padding: 0.85rem 0.9rem;
+  border-radius: 12px;
+  background: var(--apex-bg);
+  color: var(--apex-muted);
+  line-height: 1.55;
 }
 
 .testimonials-photo-section {
