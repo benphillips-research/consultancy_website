@@ -274,12 +274,14 @@ footer a { color: #ffffff; }
 }
 
 .site-cta-section {
-  background: linear-gradient(180deg, #ffffff 0%, #eef6ef 100%);
+  background: #ffffff;
   border-top: 1px solid rgba(63, 130, 133, 0.14);
   padding: var(--section-pad);
 }
 
 .site-cta-card {
+  background: var(--apex-bg);
+  border: 1px solid var(--apex-border);
   padding: clamp(1.75rem, 4vw, 2.5rem);
 }
 
@@ -357,8 +359,7 @@ footer a { color: #ffffff; }
 .credibility-section,
 .testimonial-preview-section,
 .home-hero-visual,
-.home-earth-section,
-.final-cta-section { background: var(--apex-bg); }
+.home-earth-section { background: var(--apex-bg); }
 
 .home-hero-actions {
   display: flex;
@@ -780,8 +781,6 @@ footer a { color: #ffffff; }
   object-fit: contain;
 }
 
-.testimonials-cta-section.site-cta-section { background: linear-gradient(180deg, #ffffff 0%, #eef6ef 100%); }
-.testimonials-cta-card { background: #ffffff; }
 
 /* Publications */
 
