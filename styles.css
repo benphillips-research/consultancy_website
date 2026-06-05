@@ -3231,3 +3231,19 @@ html {
 .testimonial-proof-card h3 {
   text-align: center;
 }
+
+/* Publications: separate selected work intro from publication lists */
+
+.publications-list-intro {
+  background: #ffffff;
+  padding-bottom: clamp(2rem, 4vw, 3rem);
+}
+
+.publication-category-section {
+  background: var(--apex-bg);
+  padding-top: clamp(2.5rem, 5vw, 4rem);
+}
+
+.publication-category-section:nth-of-type(even) {
+  background: #ffffff;
+}
