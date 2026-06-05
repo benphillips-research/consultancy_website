@@ -900,8 +900,8 @@ footer a { color: #ffffff; }
   min-height: 2.25rem;
   margin-left: auto;
   margin-right: auto;
-  color: var(--apex-blue);
-  font-size: 0.95rem;
+  color: var(--apex-text);
+  font-size: clamp(1.08rem, 1.7vw, 1.24rem);
 }
 
 .publication-theme-bubble a {
