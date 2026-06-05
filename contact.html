@@ -1,94 +1,1191 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta
-    name="description"
-    content="Contact Apex Science & Conservation to discuss scientific support for conservation projects, research, evidence synthesis, data analysis, grant writing or programme development."
-  />
-  <title>Contact | Apex Science & Conservation</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
+:root {
+  --apex-blue: #3f8285;
+  --apex-blue-soft: #e4f4f5;
+  --apex-bg: #f5f8f5;
+  --apex-text: #2e2e2e;
+  --apex-muted: #3d3d3d;
+  --apex-muted-blue: #4f6465;
+  --apex-border: rgba(63, 130, 133, 0.16);
+  --apex-border-soft: rgba(63, 130, 133, 0.12);
+  --card-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  --radius-card: 18px;
+  --radius-mobile: 14px;
+  --section-pad: clamp(2.5rem, 5vw, 4rem) 1rem;
+  --section-pad-sm: clamp(2rem, 4vw, 3rem) 1rem;
+  --hero-pad: clamp(2.75rem, 6vw, 5rem) 1.5rem;
+  --hero-bg: linear-gradient(180deg, var(--apex-blue-soft) 0%, var(--apex-bg) 100%);
+}
 
-<body>
-  <header>
-    <a href="index.html">
-      <img src="images/logo-apex-white.png" alt="Apex logo">
-    </a>
-    <nav>
-      <a href="index.html">About Apex</a>
-      <a href="services.html">Services</a>
-      <a href="testimonials.html">Testimonials</a>
-      <a href="publications.html">Publications</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </header>
+*, *::before, *::after { box-sizing: border-box; }
 
-  <main class="contact-main">
-    <section class="contact-hero page-hero">
-      <div class="container-lg text-center">
-        <p class="home-kicker">Contact Apex</p>
-        <h1>Let’s talk about your project.</h1>
-        <p class="contact-hero-text">
-          Whether you have a clear brief, an early idea or a question that needs careful scientific input,
-      we would be happy to hear from you.
-        </p>
-      </div>
-    </section>
+html {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
 
-    <section class="contact-options-section site-cta-section" aria-labelledby="contact-options-heading">
-      <div class="container-lg">
-        <p class="section-kicker text-center">Get in touch</p>
-        <h2 id="contact-options-heading" class="home-section-heading text-center">
-          The best ways to reach us
-        </h2>
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  font-family: system-ui, sans-serif;
+  line-height: 1.8;
+  color: var(--apex-text);
+  background: var(--apex-bg);
+}
 
-        <div class="contact-options-grid card-grid grid-2">
-          <article class="contact-option-card site-cta-card card card-outline">
-  <a href="mailto:info@apex-science.co.uk" class="contact-option-icon-link" aria-label="Email Apex">
-    <img src="images/email.png" alt="" class="contact-option-icon">
-  </a>
+img {
+  max-width: 100%;
+  height: auto;
+}
 
-  <h3 class="contact-option-title">Email us</h3>
-  <p>
-    For project enquiries, possible collaborations or anything you would like to talk through.
-  </p>
-  <p class="contact-link-line">
-    <a href="mailto:info@apex-science.co.uk">info@apex-science.co.uk</a>
-  </p>
-</article>
+h1, h2, h3 { color: var(--apex-blue); }
+a { color: var(--apex-blue); }
 
-<article class="contact-option-card site-cta-card card card-outline">
-  <a
-    href="https://www.linkedin.com/company/apex-science-and-conservation/"
-    target="_blank"
-    rel="noopener noreferrer"
-    class="contact-option-icon-link"
-    aria-label="Visit Apex Science & Conservation on LinkedIn"
-  >
-    <img src="images/linkedin.png" alt="" class="contact-option-icon">
-  </a>
+/* Layout */
 
-  <h3 class="contact-option-title">Find us on LinkedIn</h3>
-  <p>
-    You can also find Apex on LinkedIn through our company page.
-  </p>
-  <p class="contact-link-line">
-    <a href="https://www.linkedin.com/company/apex-science-and-conservation/" target="_blank" rel="noopener noreferrer">Visit our LinkedIn</a>
-  </p>
-</article>
-        </div>
-      </div>
-    </section>
-  </main>
+.container-md {
+  max-width: 800px;
+  margin: 3rem auto;
+}
 
-  <footer>
-    <p class="footer-contact">
-      <a href="mailto:info@apex-science.co.uk" class="footer-icon email" aria-label="Email Apex"></a>
-      <a href="https://www.linkedin.com/company/apex-science-and-conservation/" target="_blank" rel="noopener noreferrer" class="footer-icon linkedin" aria-label="Apex LinkedIn"></a>
-    </p>
-    <p>&copy; 2025 Apex Science and Conservation LLP. All rights reserved.</p>
-  </footer>
-</body>
-</html>
+.container-lg {
+  max-width: 1150px;
+  margin: 3rem auto;
+}
+
+.text-center { text-align: center; }
+
+.home-main > section,
+.services-main > section,
+.testimonials-main > section,
+.publications-main > section,
+.contact-main > section {
+  max-width: none;
+  margin: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+/* Header and footer */
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1.75rem;
+  background: var(--apex-blue);
+  color: #ffffff;
+}
+
+header img {
+  display: block;
+  width: auto;
+  height: 75px;
+}
+
+nav a {
+  margin: 0 1rem;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+nav a:hover { text-decoration: underline; }
+
+footer {
+  background: var(--apex-blue);
+  color: #ffffff;
+  text-align: center;
+  padding: 1.25rem 1rem;
+  font-size: 0.9rem;
+}
+
+footer p { margin: 0.35rem 0; }
+footer a { color: #ffffff; }
+.footer-contact { margin: 0 0 0.5rem; }
+
+.footer-icon {
+  display: inline-block;
+  width: 45px;
+  height: 45px;
+  margin: 0 0.5rem;
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.95;
+  filter: brightness(0) invert(1);
+  transition: opacity 0.2s ease;
+}
+
+.footer-icon:hover { opacity: 1; }
+.footer-icon.email { background-image: url('images/email.png'); }
+.footer-icon.linkedin { background-image: url('images/linkedin.png'); }
+
+/* Shared typography */
+
+.home-kicker,
+.services-hero-kicker {
+  display: inline-block;
+  margin: 0 0 1rem;
+  padding: 0.35rem 0.85rem;
+  border-radius: 999px;
+  background: #ffffff;
+  color: var(--apex-blue);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.section-kicker {
+  margin: 0 0 0.6rem;
+  color: var(--apex-blue);
+  font-size: 0.9rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.home-section-heading,
+.services-intro-section h2,
+.other-services-section h2 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  color: var(--apex-text);
+  font-size: clamp(1.75rem, 3.25vw, 2.35rem);
+  line-height: 1.14;
+  font-weight: 750;
+}
+
+.section-intro {
+  max-width: 780px;
+  margin: 0.5rem auto 2rem;
+}
+
+/* Buttons */
+
+.button {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  background: var(--apex-blue);
+  color: #ffffff;
+  text-decoration: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.button:hover {
+  background: #7f997f;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.button-secondary {
+  background: #ffffff;
+  color: var(--apex-blue);
+  border: 2px solid var(--apex-blue);
+}
+
+.button-secondary:hover {
+  background: var(--apex-blue-soft);
+  color: var(--apex-text);
+}
+
+/* Shared components */
+
+.page-hero {
+  background: var(--hero-bg);
+  padding: var(--hero-pad);
+}
+
+.home-hero { padding-bottom: clamp(2.8rem, 6vw, 5.4rem); }
+
+.home-hero-inner,
+.services-overview-content,
+.services-hero-combined .services-overview-content {
+  max-width: 1050px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.page-hero h1 {
+  max-width: 900px;
+  margin: 0 auto 1.25rem;
+  color: var(--apex-text);
+  font-size: clamp(1.75rem, 3.4vw, 2.75rem);
+  line-height: 1.12;
+}
+
+.home-hero-text,
+.services-hero-text,
+.testimonials-hero-text,
+.publications-hero-text,
+.contact-hero-text {
+  max-width: 780px;
+  margin: 0 auto;
+  color: #3b3b3b;
+  font-size: clamp(1rem, 1.55vw, 1.16rem);
+  line-height: 1.7;
+}
+
+.services-hero-text { margin-bottom: 2.25rem; }
+
+.card-grid {
+  display: grid;
+  gap: 1.5rem;
+  align-items: stretch;
+  margin: 2rem auto 0;
+}
+
+.grid-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  max-width: 1100px;
+}
+
+.grid-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  max-width: 900px;
+}
+
+.testimonials-page-grid { max-width: 1150px; }
+
+.card {
+  background: #ffffff;
+  border-radius: var(--radius-card);
+  padding: 1.75rem;
+  box-shadow: var(--card-shadow);
+}
+
+.card-outline { border: 1px solid var(--apex-border); }
+.card-outline-soft { border: 1px solid var(--apex-border-soft); }
+.card-soft { background: var(--apex-blue-soft); }
+
+.card-accent-top {
+  position: relative;
+  overflow: hidden;
+  padding: 1.55rem 1.35rem 1.35rem;
+}
+
+.card-accent-top::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 5px;
+  background: var(--apex-blue);
+}
+
+.site-cta-section {
+  background: #ffffff;
+  border-top: 1px solid rgba(63, 130, 133, 0.14);
+  padding: var(--section-pad);
+}
+
+.site-cta-card {
+  background: var(--apex-bg);
+  border: 1px solid var(--apex-border);
+}
+
+.site-cta-section > .container-md.site-cta-card {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: clamp(2.25rem, 5vw, 3.4rem);
+  border-radius: 28px;
+  background: linear-gradient(180deg, #fbfdfb 0%, var(--apex-bg) 100%);
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.07);
+  position: relative;
+  overflow: hidden;
+}
+
+.site-cta-section > .container-md.site-cta-card::before {
+  content: "";
+  display: block;
+  width: 68px;
+  height: 4px;
+  margin: 0 auto 1.25rem;
+  border-radius: 999px;
+  background: var(--apex-blue);
+  opacity: 0.78;
+}
+
+.site-cta-card h2,
+.site-cta-card h3 { margin-top: 0; }
+
+.site-cta-card p {
+  max-width: 680px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.credibility-section,
+.people-preview-section,
+.testimonial-preview-section,
+.publication-stats-section,
+.testimonial-proof-section,
+.testimonials-list-section,
+.contact-options-section,
+.other-services-section,
+.final-cta-section {
+  padding: var(--section-pad);
+}
+
+.services-intro-section,
+.service-detail-section,
+.publications-list-intro { padding: var(--section-pad-sm); }
+
+.overview-point-bubble,
+.service-area-bubble,
+.publication-theme-bubble,
+.contact-option-bubble {
+  display: table;
+  margin: 0 auto 1rem;
+  padding: 0.35rem 0.85rem;
+  border-radius: 999px;
+  background: var(--apex-blue-soft);
+  color: var(--apex-blue);
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  line-height: 1.3;
+  text-align: center;
+}
+
+.overview-mini-list,
+.service-mini-list {
+  display: grid;
+  gap: 0.65rem;
+  text-align: left;
+}
+
+.overview-mini-list p,
+.service-mini-list p {
+  margin: 0;
+  padding: 0.68rem 0.75rem;
+  border-radius: 12px;
+  background: var(--apex-bg);
+  color: var(--apex-muted);
+  line-height: 1.45;
+}
+
+.overview-mini-list strong,
+.service-mini-list strong {
+  color: var(--apex-blue);
+  font-weight: 800;
+}
+
+/* Homepage */
+
+.partner-strip,
+.home-photo-section,
+.people-preview-section { background: #ffffff; }
+
+.home-overview-section,
+.credibility-section,
+.testimonial-preview-section,
+.home-hero-visual,
+.home-earth-section { background: var(--apex-bg); }
+
+.home-hero-actions {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+.partner-strip { padding: 2rem 1rem; }
+
+.partner-strip-heading {
+  margin: 0 0 1.4rem;
+  color: var(--apex-blue);
+  font-size: clamp(0.95rem, 1.4vw, 1.08rem);
+  line-height: 1.35;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+
+.partner-logo-list {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(120px, 1fr));
+  gap: 1rem;
+  align-items: stretch;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.partner-logo-card {
+  min-height: 110px;
+  padding: 1rem;
+  border-radius: var(--radius-card);
+  background: var(--apex-bg);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.07);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.partner-logo-card img {
+  display: block;
+  max-width: 100%;
+  max-height: 72px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+.partner-logo-card img[src*="logo-plantone"] { max-height: 86px; }
+.partner-logo-card img[src*="logo-woodland-trust"] { max-height: 82px; }
+.partner-logo-card img[src*="logo-fundacao-principe"] { max-height: 78px; }
+.partner-logo-card img[src*="logo-clean-catch-uk"] { max-height: 70px; }
+
+.home-overview-section {
+  padding: clamp(1.5rem, 3vw, 2.5rem) 1rem clamp(3rem, 6vw, 5rem);
+}
+
+.home-overview-content {
+  max-width: 1050px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.home-overview-content h2 {
+  margin: 0 0 1rem;
+  color: var(--apex-text);
+  font-size: clamp(1.9rem, 3.8vw, 2.7rem);
+  line-height: 1.15;
+}
+
+.home-overview-lead {
+  max-width: 720px;
+  margin: 0 auto 1.75rem;
+  color: var(--apex-muted);
+  font-size: clamp(1.02rem, 1.75vw, 1.18rem);
+}
+
+.overview-points { gap: 1.25rem; }
+.overview-point-bubble {
+  padding: 0.32rem 0.78rem;
+  font-size: 0.86rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+.home-overview-actions { margin-top: 1.6rem; }
+.home-photo-section { padding: var(--section-pad-sm); }
+
+.home-photo-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-rows: repeat(2, 300px);
+  gap: 1rem;
+}
+
+.home-photo-grid .home-photo,
+.home-earth-image,
+.home-hero-visual-image,
+.testimonials-wide-photo,
+.publications-strip-image {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: var(--radius-card);
+  box-shadow: var(--card-shadow);
+}
+
+.home-photo-grid .home-photo { height: 100%; }
+.home-photo-grid .home-photo-large { grid-row: span 2; }
+
+.home-hero-visual,
+.home-earth-section,
+.publications-strip-section { padding: 0 1rem clamp(2rem, 4vw, 3rem); }
+
+.home-hero-visual .container-lg,
+.home-earth-section .container-lg,
+.testimonials-photo-section .container-lg,
+.publications-strip-section .container-lg {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.home-hero-visual-image,
+.publications-strip-image { height: clamp(150px, 18vw, 240px); }
+.home-hero-visual-image { object-position: right center; }
+.home-earth-image { height: clamp(260px, 38vw, 460px); }
+
+.credibility-section h2.home-section-heading {
+  margin-bottom: 0.65rem;
+  font-size: clamp(1.45rem, 2.7vw, 1.85rem);
+  line-height: 1.18;
+}
+
+.credibility-card h3,
+.publication-stat-card h3,
+.testimonial-proof-card h3 {
+  margin-top: 0;
+  text-align: center;
+}
+
+.credibility-card p,
+.publication-stat-card p,
+.publication-theme-card p,
+.testimonial-proof-card p { margin-bottom: 0; }
+
+.credibility-number {
+  margin: 0 0 0.4rem !important;
+  color: var(--apex-blue);
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1;
+  font-weight: 800;
+  text-align: center;
+}
+
+.credibility-number.credibility-number-text {
+  font-size: clamp(1.6rem, 3vw, 2.35rem);
+  line-height: 1.04;
+  letter-spacing: -0.03em;
+}
+
+.people-preview-section h2 {
+  margin-top: 0;
+  font-size: clamp(1.95rem, 4vw, 2.7rem);
+}
+
+.people-preview-section .section-intro {
+  max-width: 760px;
+  margin-bottom: 2.25rem;
+}
+
+.profiles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+  align-items: stretch;
+}
+
+.home-profiles {
+  max-width: 1100px;
+  margin: 2rem auto 0;
+}
+
+.profile-card {
+  flex: 1 1 45%;
+  max-width: 45%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.profile-card img {
+  width: auto;
+  max-width: none;
+  height: 325px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin: 0 auto 1rem;
+  display: block;
+}
+
+.home-profiles .profile-card h3 { margin-top: 0; }
+
+.testimonial-card,
+.testimonial-page-card {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.testimonial-card p,
+.testimonial-page-card p {
+  margin-top: 0;
+  font-style: italic;
+}
+
+.testimonial-card footer,
+.testimonial-page-card footer {
+  margin-top: 1.25rem;
+  padding-top: 1rem;
+  border-top: 1px solid #d5e7e8;
+  background: transparent;
+  text-align: left;
+}
+
+.testimonial-card footer strong,
+.testimonial-page-card footer strong {
+  display: block;
+  color: var(--apex-blue);
+  font-size: 1rem;
+}
+
+.testimonial-card footer span,
+.testimonial-page-card footer span {
+  display: block;
+  margin-top: 0.2rem;
+  color: var(--apex-muted-blue);
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.testimonial-link {
+  margin-top: 2rem;
+  margin-bottom: 0;
+}
+
+/* Services */
+
+.services-hero-combined .service-area-grid { margin-top: 0; }
+
+.service-area-bubble {
+  color: var(--apex-text);
+  font-size: clamp(0.92rem, 1.4vw, 1.05rem);
+  text-transform: none;
+}
+
+.service-area-icon {
+  display: block;
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+  margin: 0 auto 1.1rem;
+}
+
+.services-intro-section { background: #ffffff; }
+
+.services-intro-section p {
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.service-detail-section { background: var(--apex-bg); }
+.services-intro-section + .service-detail-section + .service-detail-section,
+.services-intro-section + .service-detail-section + .service-detail-section + .service-detail-section + .service-detail-section { background: #ffffff; }
+
+.sidepicture-section {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  max-width: 1200px;
+  margin: 0 auto 3rem;
+  padding: 0;
+}
+
+.sidepicture-section.reverse { flex-direction: row-reverse; }
+.service-detail-layout { align-items: stretch; }
+.service-detail-section .sidepicture-section { margin-bottom: 0; }
+
+.sidepicture-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.service-detail-section .sidepicture-text {
+  background: #ffffff;
+  border-radius: var(--radius-card);
+  padding: clamp(1.5rem, 3vw, 2rem);
+  box-shadow: var(--card-shadow);
+}
+
+.sidepicture-text p { margin: 0.5rem 0; }
+.sidepicture-text li { margin-left: 1.5rem; }
+.service-detail-section .sidepicture-text h2 { margin-top: 0; }
+.service-detail-section .sidepicture-text p,
+.service-detail-section .sidepicture-text li { line-height: 1.7; }
+.service-detail-section .sidepicture-text p:first-of-type { margin-top: 0; }
+.service-detail-section .sidepicture-text ul { margin-top: 0.75rem; }
+.service-detail-section .sidepicture-text li { margin-bottom: 0.75rem; }
+.service-detail-section .sidepicture-text li:last-child { margin-bottom: 0; }
+
+.service-detail-title {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  margin: 0 0 1rem;
+  padding: 0.5rem 0.85rem;
+  border-radius: 999px;
+  background: var(--apex-blue-soft);
+  color: var(--apex-text) !important;
+  font-size: clamp(1.25rem, 2.4vw, 1.75rem) !important;
+  line-height: 1.2;
+}
+
+.service-detail-title span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 1.85rem;
+  height: 1.85rem;
+  border-radius: 999px;
+  background: #ffffff;
+  color: var(--apex-blue);
+  font-size: 0.95rem;
+  font-weight: 800;
+  flex: 0 0 auto;
+}
+
+.service-detail-image-wrap {
+  width: 500px;
+  flex-shrink: 0;
+  border-radius: var(--radius-card);
+  overflow: hidden;
+  box-shadow: var(--card-shadow);
+}
+
+.service-detail-image-wrap .sidepicture-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+  object-fit: cover;
+}
+
+.other-services-card p,
+.other-services-section p {
+  max-width: 660px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.7;
+}
+
+/* Testimonials */
+
+.testimonial-proof-section {
+  background: #ffffff;
+  padding-bottom: clamp(0.75rem, 1.5vw, 1.25rem);
+}
+
+.testimonial-proof-bubble {
+  display: block;
+  margin: 0 0 1rem;
+  color: var(--apex-blue);
+  text-align: center;
+}
+
+.testimonial-proof-card p {
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  color: var(--apex-text);
+  line-height: 1.65;
+}
+
+.testimonials-photo-section {
+  background: #ffffff;
+  padding: 0 1rem clamp(1.25rem, 2.5vw, 2rem);
+}
+
+.testimonials-wide-photo { height: clamp(220px, 32vw, 400px); }
+
+.testimonials-list-section {
+  background: var(--apex-bg);
+  padding-top: clamp(2rem, 4vw, 3rem);
+}
+
+.testimonial-page-card { gap: 1rem; }
+.testimonial-page-card footer strong { color: var(--apex-text); }
+
+.testimonial-logo-wrap {
+  min-height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.testimonial-logo {
+  display: block;
+  max-width: 170px;
+  max-height: 58px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+
+/* Publications */
+
+.publication-stats-section,
+.publications-list-intro { background: #ffffff; }
+
+.publication-themes-section,
+.publications-strip-section,
+.publication-category-section { background: var(--apex-bg); }
+
+.publication-themes-section { padding: var(--section-pad); }
+.publication-category-section { padding: var(--section-pad-sm); }
+
+.publication-stat-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  text-align: center;
+}
+
+.publication-stat-card .credibility-number,
+.publication-stat-label {
+  min-height: 3.35rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 0 0.75rem !important;
+  color: var(--apex-blue);
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1;
+  font-weight: 800;
+}
+
+.publication-stat-label {
+  font-size: clamp(1.35rem, 2.6vw, 2rem);
+  line-height: 1.08;
+}
+
+.publication-stat-card h3 {
+  min-height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 0 0.75rem;
+  color: var(--apex-text);
+  line-height: 1.25;
+}
+
+.publication-stat-card p:last-child {
+  margin: 0;
+  color: var(--apex-text);
+  line-height: 1.6;
+}
+
+.publication-theme-grid-featured { max-width: 900px; }
+
+.publication-theme-card-featured {
+  grid-column: 1 / -1;
+  width: calc((100% - 1.5rem) / 2);
+  justify-self: center;
+}
+
+.publication-theme-card {
+  display: flex;
+  flex-direction: column;
+  padding: 1.6rem 1.45rem 1.45rem;
+}
+
+.publication-theme-bubble {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  min-height: 2.25rem;
+  margin-left: auto;
+  margin-right: auto;
+  color: var(--apex-text);
+  font-size: clamp(1rem, 1.5vw, 1.12rem);
+}
+
+.publication-theme-bubble a {
+  display: inline-block;
+  color: inherit;
+  text-decoration: none;
+}
+
+.publication-theme-bubble a:hover { text-decoration: underline; }
+
+.publication-theme-icon-link {
+  display: block;
+  width: fit-content;
+  margin: 0 auto 1rem;
+}
+
+.publication-theme-icon {
+  display: block;
+  width: 149px;
+  height: 149px;
+  object-fit: contain;
+  transition: transform 0.2s ease;
+}
+
+.publication-theme-icon-link:hover .publication-theme-icon { transform: translateY(-2px); }
+
+.publications-list-intro p {
+  max-width: 680px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.publications-list-intro + .publication-category-section + .publication-category-section,
+.publications-list-intro + .publication-category-section + .publication-category-section + .publication-category-section + .publication-category-section { background: #ffffff; }
+
+.publication-category-section .publications-box {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: clamp(1.5rem, 3vw, 2rem);
+}
+
+.publications-box h2 {
+  margin-top: 0;
+  color: var(--apex-text);
+}
+
+.publication-section-heading {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.publication-section-icon {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+  flex: 0 0 auto;
+}
+
+.publication-list {
+  margin: 1.5rem 0 0;
+  padding-left: 1.25rem;
+}
+
+.publication-list li {
+  margin-bottom: 0.95rem;
+  line-height: 1.7;
+}
+
+.publication-list li:last-child { margin-bottom: 0; }
+
+.publication-list a {
+  display: inline-block;
+  margin-left: 0.2rem;
+  color: var(--apex-blue);
+  font-weight: 800;
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 0.16em;
+}
+
+.publication-list a:hover { color: var(--apex-text); }
+
+.publications-cta-card p {
+  max-width: 680px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Contact */
+
+.contact-option-card { text-align: center; }
+
+.contact-option-icon,
+.contact-option-icon-link img {
+  width: 46px;
+  height: 46px;
+  object-fit: contain;
+  margin: 0 auto 1rem;
+}
+
+.contact-option-title { margin-top: 0; }
+
+.contact-option-card p {
+  max-width: 420px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.7;
+}
+
+.contact-link-line {
+  margin-bottom: 0;
+  font-weight: 800;
+  overflow-wrap: anywhere;
+}
+
+.contact-link-line a {
+  color: var(--apex-blue);
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 0.16em;
+}
+
+.contact-link-line a:hover { color: var(--apex-text); }
+
+/* Responsive */
+
+@media (max-width: 950px) {
+  .partner-logo-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    max-width: 650px;
+  }
+
+  .partner-logo-card:last-child { grid-column: 1 / -1; }
+
+  .overview-points {
+    grid-template-columns: 1fr;
+    max-width: 650px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (max-width: 900px) {
+  .grid-3,
+  .grid-2 {
+    grid-template-columns: 1fr;
+    max-width: 650px;
+  }
+
+  .publication-theme-card-featured { width: 100%; }
+
+  .sidepicture-section,
+  .sidepicture-section.reverse {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    text-align: left;
+  }
+
+  .sidepicture-text,
+  .sidepicture-text li { text-align: left; }
+  .sidepicture-text li { margin-left: 0; }
+
+  .service-detail-image-wrap {
+    width: 90%;
+    max-width: 560px;
+  }
+
+  .service-detail-image-wrap .sidepicture-image {
+    height: auto;
+    min-height: 0;
+  }
+
+  .testimonial-logo-wrap { justify-content: center; }
+
+  .testimonial-page-card,
+  .testimonial-page-card footer { text-align: center; }
+}
+
+@media (max-width: 800px) {
+  .home-photo-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: none;
+  }
+
+  .home-photo-grid .home-photo,
+  .home-photo-grid .home-photo-large {
+    height: auto;
+    grid-row: auto;
+  }
+}
+
+@media (max-width: 700px) {
+  .home-earth-image { height: auto; }
+}
+
+@media (max-width: 640px) {
+  header { padding: 0.5rem 1rem; }
+  header img { height: 70px; }
+
+  nav {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 0.15rem;
+  }
+
+  nav a {
+    margin: 0;
+    padding: 0.1rem 0;
+    line-height: 1.2;
+    font-size: 0.95rem;
+  }
+
+  .home-section-heading,
+  .services-intro-section h2,
+  .other-services-section h2 { font-size: clamp(1.45rem, 6vw, 1.9rem); }
+
+  .section-kicker { font-size: 0.82rem; }
+  .page-hero h1 { font-size: clamp(1.9rem, 8.5vw, 2.55rem); }
+
+  .home-hero-text,
+  .services-hero-text,
+  .testimonials-hero-text,
+  .publications-hero-text,
+  .contact-hero-text { font-size: 0.98rem; }
+
+  .home-hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .home-hero-actions .button { text-align: center; }
+  .partner-logo-list { grid-template-columns: 1fr; }
+  .partner-logo-card { min-height: 96px; }
+  .partner-logo-card:last-child { grid-column: auto; }
+  .partner-logo-card img { max-height: 64px; }
+
+  .partner-logo-card img[src*="logo-plantone"],
+  .partner-logo-card img[src*="logo-woodland-trust"],
+  .partner-logo-card img[src*="logo-fundacao-principe"],
+  .partner-logo-card img[src*="logo-clean-catch-uk"] { max-height: 70px; }
+
+  .profiles {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+  }
+
+  .profile-card {
+    flex: 1 1 100% !important;
+    max-width: 100% !important;
+    text-align: left;
+  }
+
+  .profile-card img {
+    max-width: 70%;
+    margin-left: 0;
+  }
+
+  .home-profiles .profile-card { text-align: left; }
+
+  .card,
+  .card-accent-top,
+  .service-detail-section .sidepicture-text {
+    border-radius: var(--radius-mobile);
+    padding: 1.25rem;
+  }
+
+  .site-cta-section > .container-md.site-cta-card {
+    border-radius: 22px;
+    padding: 1.75rem 1.35rem;
+  }
+
+  .overview-point-bubble {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .service-detail-title {
+    border-radius: var(--radius-card);
+    align-items: flex-start;
+  }
+
+  .service-area-icon {
+    width: 115px;
+    height: 115px;
+  }
+
+  .testimonial-logo { max-width: 160px; }
+
+  .publication-stat-card .credibility-number,
+  .publication-stat-label,
+  .publication-stat-card h3 { min-height: 0; }
+
+  .publication-theme-icon {
+    width: 92px;
+    height: 92px;
+  }
+
+  .publication-section-heading { align-items: center; }
+
+  .publication-section-icon {
+    width: 52px;
+    height: 52px;
+  }
+
+  .publication-list { padding-left: 1rem; }
+}
