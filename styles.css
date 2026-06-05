@@ -1,13 +1,20 @@
 :root {
-  --apex-blue: #3F8285;
+  --apex-blue: #3f8285;
   --apex-blue-soft: #e4f4f5;
   --apex-bg: #f5f8f5;
   --apex-text: #2e2e2e;
   --apex-muted: #3d3d3d;
   --apex-muted-blue: #4f6465;
   --apex-border: rgba(63, 130, 133, 0.16);
+  --apex-border-soft: rgba(63, 130, 133, 0.12);
   --card-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
   --soft-shadow: 0 8px 22px rgba(0, 0, 0, 0.06);
+  --radius-card: 18px;
+  --radius-mobile: 14px;
+  --section-pad: clamp(2.5rem, 5vw, 4rem) 1rem;
+  --section-pad-sm: clamp(2rem, 4vw, 3rem) 1rem;
+  --hero-pad: clamp(2.75rem, 6vw, 5rem) 1.5rem;
+  --hero-bg: linear-gradient(180deg, var(--apex-blue-soft) 0%, var(--apex-bg) 100%);
 }
 
 *,
@@ -17,17 +24,14 @@
 }
 
 html {
-  scroll-behavior: smooth;
-}
-
-html,
-body {
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 body {
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
   font-family: system-ui, sans-serif;
   line-height: 1.8;
   color: var(--apex-text);
@@ -48,6 +52,35 @@ h3 {
 a {
   color: var(--apex-blue);
 }
+
+/* Layout helpers */
+
+.container-md {
+  max-width: 800px;
+  margin: 3rem auto;
+}
+
+.container-lg {
+  max-width: 1150px;
+  margin: 3rem auto;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.home-main > section,
+.services-main > section,
+.testimonials-main > section,
+.publications-main > section,
+.contact-main > section {
+  max-width: none;
+  margin: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+/* Header and footer */
 
 header {
   display: flex;
@@ -120,58 +153,7 @@ footer a {
   background-image: url('images/linkedin.png');
 }
 
-.container-md {
-  max-width: 800px;
-  margin: 3rem auto;
-}
-
-.container-lg {
-  max-width: 1150px;
-  margin: 3rem auto;
-}
-
-.text-center {
-  text-align: center;
-}
-
-.button {
-  display: inline-block;
-  margin-top: 1rem;
-  padding: 0.75rem 1.5rem;
-  border-radius: 8px;
-  background: var(--apex-blue);
-  color: #ffffff;
-  text-decoration: none;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease;
-}
-
-.button:hover {
-  background: #7f997f;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-}
-
-.button-secondary {
-  background: #ffffff;
-  color: var(--apex-blue);
-  border: 2px solid var(--apex-blue);
-}
-
-.button-secondary:hover {
-  background: var(--apex-blue-soft);
-  color: var(--apex-text);
-}
-
-.home-main > section,
-.services-main > section,
-.testimonials-main > section,
-.publications-main > section,
-.contact-main > section {
-  max-width: none;
-  margin: 0;
-  border-radius: 0;
-  box-shadow: none;
-}
+/* Shared typography and components */
 
 .home-kicker,
 .services-hero-kicker {
@@ -205,6 +187,59 @@ footer a {
   font-weight: 750;
 }
 
+.section-intro {
+  max-width: 780px;
+  margin: 0.5rem auto 2rem;
+}
+
+.button {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  background: var(--apex-blue);
+  color: #ffffff;
+  text-decoration: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.button:hover {
+  background: #7f997f;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.button-secondary {
+  background: #ffffff;
+  color: var(--apex-blue);
+  border: 2px solid var(--apex-blue);
+}
+
+.button-secondary:hover {
+  background: var(--apex-blue-soft);
+  color: var(--apex-text);
+}
+
+/* Shared hero pattern */
+
+.home-hero,
+.services-hero,
+.services-hero-combined,
+.testimonials-hero,
+.publications-hero,
+.contact-hero {
+  background: var(--hero-bg);
+  padding: var(--hero-pad);
+}
+
+.home-hero-inner,
+.services-overview-content,
+.services-hero-combined .services-overview-content {
+  max-width: 1050px;
+  margin: 0 auto;
+  text-align: center;
+}
+
 .home-hero h1,
 .services-hero h1,
 .services-hero-combined h1,
@@ -231,49 +266,9 @@ footer a {
   line-height: 1.7;
 }
 
-.credibility-grid,
-.testimonial-preview-grid,
-.publication-stats-grid,
-.publication-theme-grid,
-.testimonial-proof-grid,
-.testimonials-page-grid,
-.service-area-grid,
-.contact-options-grid {
-  display: grid;
-  gap: 1.5rem;
-  align-items: stretch;
-}
-
-.credibility-card,
-.testimonial-card,
-.home-profiles .profile-card,
-.publication-theme-card,
-.testimonial-page-card,
-.testimonials-image-copy,
-.final-cta-card,
-.other-services-card,
-.contact-reassurance-card,
-.publications-box,
-.publications-cta-card,
-.testimonials-cta-card,
-.site-cta-card {
-  background: #ffffff;
-  border-radius: 18px;
-  padding: 1.75rem;
-  box-shadow: var(--card-shadow);
-}
-
-/* Homepage */
-
-.home-hero {
-  background: linear-gradient(180deg, var(--apex-blue-soft) 0%, var(--apex-bg) 100%);
-  padding: clamp(2.6rem, 6vw, 5.2rem) 1.5rem clamp(2.8rem, 6vw, 5.4rem);
-}
-
-.home-hero-inner {
-  max-width: 950px;
-  margin: 0 auto;
-  text-align: center;
+.services-hero-text,
+.services-hero-combined .services-hero-text {
+  margin-bottom: 2.25rem;
 }
 
 .home-hero-actions {
@@ -284,26 +279,119 @@ footer a {
   flex-wrap: wrap;
 }
 
-.home-hero-visual {
-  background: var(--apex-bg);
-  padding: 0 1rem clamp(2rem, 4vw, 3rem);
+/* Shared grids and cards */
+
+.overview-points,
+.service-area-grid,
+.credibility-grid,
+.testimonial-preview-grid,
+.publication-stats-grid,
+.publication-theme-grid,
+.testimonial-proof-grid,
+.testimonials-page-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5rem;
+  align-items: stretch;
+  max-width: 1100px;
+  margin: 2rem auto 0;
 }
 
-.home-hero-visual .container-lg,
-.publications-strip-section .container-lg,
-.testimonials-photo-section .container-lg {
+.testimonials-page-grid {
+  max-width: 1150px;
+}
+
+.contact-options-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem;
+  max-width: 900px;
+  margin: 2rem auto 0;
+}
+
+.credibility-card,
+.testimonial-card,
+.home-profiles .profile-card,
+.publication-theme-card,
+.testimonial-page-card,
+.final-cta-card,
+.site-cta-card,
+.other-services-card,
+.contact-reassurance-card,
+.publications-box,
+.publications-cta-card,
+.testimonials-cta-card {
+  background: #ffffff;
+  border-radius: var(--radius-card);
+  padding: 1.75rem;
+  box-shadow: var(--card-shadow);
+}
+
+.overview-point,
+.service-area-card,
+.testimonial-proof-card,
+.publication-stat-card,
+.contact-option-card {
+  background: #ffffff;
+  border: 1px solid var(--apex-border);
+  border-radius: var(--radius-card);
+  padding: 1.75rem;
+  box-shadow: var(--card-shadow);
+  text-align: left;
+}
+
+.credibility-card h3,
+.publication-stat-card h3,
+.testimonial-proof-card h3 {
   margin-top: 0;
+  text-align: center;
+}
+
+.credibility-card p,
+.publication-stat-card p,
+.publication-theme-card p,
+.testimonial-proof-card p {
   margin-bottom: 0;
 }
 
-.home-hero-visual-image {
-  display: block;
-  width: 100%;
-  height: clamp(170px, 22vw, 300px);
-  object-fit: cover;
-  object-position: right center;
-  border-radius: 18px;
-  box-shadow: var(--card-shadow);
+.testimonial-proof-card p,
+.testimonial-page-card p,
+.publication-stat-card p,
+.publication-theme-card p,
+.publication-list li,
+.contact-option-card p,
+.contact-reassurance-card p {
+  line-height: 1.7;
+}
+
+/* Shared CTA */
+
+.site-cta-section {
+  background: linear-gradient(180deg, #ffffff 0%, #eef6ef 100%);
+  border-top: 1px solid rgba(63, 130, 133, 0.14);
+  padding: var(--section-pad);
+}
+
+.site-cta-card {
+  border: 1px solid var(--apex-border);
+  padding: clamp(1.75rem, 4vw, 2.5rem);
+}
+
+.site-cta-card h2,
+.site-cta-card h3 {
+  margin-top: 0;
+}
+
+.site-cta-card p {
+  max-width: 680px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Homepage */
+
+.home-hero {
+  padding-bottom: clamp(2.8rem, 6vw, 5.4rem);
 }
 
 .partner-strip {
@@ -320,20 +408,6 @@ footer a {
   letter-spacing: 0.01em;
 }
 
-.partner-logo-strip h2.home-section-heading {
-  margin-top: 0;
-  margin-bottom: 0.25rem;
-  color: var(--apex-blue);
-  font-size: clamp(1.45rem, 2.7vw, 1.85rem);
-  line-height: 1.18;
-}
-
-.partner-strip-intro {
-  margin: 0 auto;
-  color: var(--apex-muted-blue);
-  font-weight: 600;
-}
-
 .partner-logo-list {
   display: grid;
   grid-template-columns: repeat(5, minmax(120px, 1fr));
@@ -346,7 +420,7 @@ footer a {
 .partner-logo-card {
   min-height: 110px;
   padding: 1rem;
-  border-radius: 18px;
+  border-radius: var(--radius-card);
   background: var(--apex-bg);
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.07);
   display: flex;
@@ -368,8 +442,14 @@ footer a {
 .partner-logo-card img[src*="logo-fundacao-principe"] { max-height: 78px; }
 .partner-logo-card img[src*="logo-clean-catch-uk"] { max-height: 70px; }
 
-.home-overview-section {
+.home-overview-section,
+.credibility-section,
+.home-hero-visual,
+.home-earth-section {
   background: var(--apex-bg);
+}
+
+.home-overview-section {
   padding: clamp(1.5rem, 3vw, 2.5rem) 1rem clamp(3rem, 6vw, 5rem);
 }
 
@@ -395,10 +475,7 @@ footer a {
 }
 
 .overview-points {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1.25rem;
-  align-items: stretch;
   text-align: left;
 }
 
@@ -406,12 +483,7 @@ footer a {
 .service-area-card {
   position: relative;
   overflow: hidden;
-  background: #ffffff;
-  border: 1px solid var(--apex-border);
-  border-radius: 18px;
   padding: 1.55rem 1.35rem 1.35rem;
-  box-shadow: var(--soft-shadow);
-  text-align: left;
 }
 
 .overview-point::before,
@@ -425,7 +497,6 @@ footer a {
 
 .overview-point-bubble,
 .service-area-bubble,
-.testimonial-proof-bubble,
 .publication-theme-bubble,
 .contact-option-bubble {
   display: table;
@@ -434,7 +505,6 @@ footer a {
   border-radius: 999px;
   background: var(--apex-blue-soft);
   color: var(--apex-blue);
-  font-size: 0.95rem;
   font-weight: 800;
   letter-spacing: 0.02em;
   line-height: 1.3;
@@ -442,6 +512,7 @@ footer a {
 }
 
 .overview-point-bubble {
+  padding: 0.32rem 0.78rem;
   font-size: 0.86rem;
   letter-spacing: 0.05em;
   text-transform: uppercase;
@@ -481,62 +552,64 @@ footer a {
 
 .home-photo-grid {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   grid-template-rows: repeat(2, 300px);
   gap: 1rem;
 }
 
-.home-photo-grid .home-photo {
+.home-photo-grid .home-photo,
+.home-earth-image,
+.home-hero-visual-image,
+.testimonials-wide-photo,
+.publications-strip-image {
   display: block;
   width: 100%;
-  height: 100%;
   object-fit: cover;
-  border-radius: 18px;
+  object-position: center;
+  border-radius: var(--radius-card);
   box-shadow: var(--card-shadow);
+}
+
+.home-photo-grid .home-photo {
+  height: 100%;
 }
 
 .home-photo-grid .home-photo-large {
   grid-row: span 2;
 }
 
-.credibility-section,
-.people-preview-section,
-.testimonial-preview-section,
-.final-cta-section {
-  padding: clamp(2.5rem, 5vw, 4rem) 1rem;
+.home-hero-visual,
+.home-earth-section {
+  padding: 0 1rem clamp(2rem, 4vw, 3rem);
+}
+
+.home-hero-visual .container-lg,
+.home-earth-section .container-lg,
+.testimonials-photo-section .container-lg,
+.publications-strip-section .container-lg {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.home-hero-visual-image {
+  height: clamp(150px, 18vw, 240px);
+  object-position: right center;
+}
+
+.home-earth-image {
+  height: clamp(260px, 38vw, 460px);
 }
 
 .credibility-section,
-.testimonial-preview-section,
-.home-earth-section,
-.final-cta-section {
-  background: var(--apex-bg);
+.people-preview-section,
+.testimonial-preview-section {
+  padding: var(--section-pad);
 }
 
 .credibility-section h2.home-section-heading {
   margin-bottom: 0.65rem;
   font-size: clamp(1.45rem, 2.7vw, 1.85rem);
   line-height: 1.18;
-}
-
-.credibility-grid,
-.testimonial-preview-grid {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  max-width: 1100px;
-  margin: 2rem auto 0;
-}
-
-.credibility-card h3,
-.publication-stat-card h3 {
-  margin-top: 0;
-  text-align: center;
-}
-
-.credibility-card p,
-.publication-stat-card p,
-.publication-theme-card p,
-.testimonial-proof-card p {
-  margin-bottom: 0;
 }
 
 .credibility-number {
@@ -554,15 +627,9 @@ footer a {
   letter-spacing: -0.03em;
 }
 
-.section-intro {
-  max-width: 780px;
-  margin: 0.5rem auto 2rem;
-}
-
-.people-preview-section {
+.people-preview-section,
+.testimonial-preview-section {
   background: #ffffff;
-  padding-top: clamp(3rem, 6vw, 5rem);
-  padding-bottom: clamp(3rem, 6vw, 5rem);
 }
 
 .people-preview-section h2 {
@@ -598,49 +665,51 @@ footer a {
 }
 
 .profile-card img {
-  display: block;
   width: auto;
   max-width: none;
   height: 325px;
   object-fit: cover;
   border-radius: 8px;
   margin: 0 auto 1rem;
+  display: block;
 }
 
 .home-profiles .profile-card h3 {
   margin-top: 0;
 }
 
-.testimonial-card {
+.testimonial-card,
+.testimonial-page-card {
   margin: 0;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
-.testimonial-card p {
+.testimonial-card p,
+.testimonial-page-card p {
   margin-top: 0;
   font-style: italic;
 }
 
-.testimonial-card footer {
-  margin-top: 1rem;
+.testimonial-card footer,
+.testimonial-page-card footer {
+  margin-top: 1.25rem;
   padding-top: 1rem;
   border-top: 1px solid #d5e7e8;
   background: transparent;
-  color: var(--apex-blue);
   text-align: left;
-  font-weight: 700;
-  font-size: 0.95rem;
 }
 
-.testimonial-card footer strong {
+.testimonial-card footer strong,
+.testimonial-page-card footer strong {
   display: block;
   color: var(--apex-blue);
   font-size: 1rem;
 }
 
-.testimonial-card footer span {
+.testimonial-card footer span,
+.testimonial-page-card footer span {
   display: block;
   margin-top: 0.2rem;
   color: var(--apex-muted-blue);
@@ -653,79 +722,12 @@ footer a {
   margin-bottom: 0;
 }
 
-.home-earth-section {
-  padding: 0 1rem clamp(2.5rem, 5vw, 4rem);
-}
-
-.home-earth-section .container-lg {
-  margin-top: 0;
-}
-
-.home-earth-image {
-  display: block;
-  width: 100%;
-  height: clamp(260px, 38vw, 460px);
-  object-fit: cover;
-  object-position: center;
-  border-radius: 18px;
-  box-shadow: var(--card-shadow);
-}
-
 .final-cta-section {
-  padding-top: clamp(2.75rem, 5vw, 4.5rem);
-  padding-bottom: clamp(2.75rem, 5vw, 4.5rem);
-}
-
-.final-cta-card,
-.site-cta-card {
-  border: 1px solid var(--apex-border);
-  padding: clamp(1.75rem, 4vw, 2.75rem);
-}
-
-.final-cta-card h2,
-.site-cta-card h2,
-.site-cta-card h3 {
-  margin-top: 0;
-  color: var(--apex-text);
-  font-size: clamp(1.65rem, 3vw, 2.2rem);
-  line-height: 1.14;
-  font-weight: 750;
-}
-
-.final-cta-card p,
-.final-cta-section p,
-.site-cta-card p {
-  max-width: 680px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.site-cta-section {
-  background: linear-gradient(180deg, #ffffff 0%, #eef6ef 100%);
-  border-top: 1px solid rgba(63, 130, 133, 0.14);
-  padding: clamp(2.5rem, 5vw, 4rem) 1rem;
+  background: var(--apex-bg);
+  padding: var(--section-pad);
 }
 
 /* Services */
-
-.services-hero,
-.services-hero-combined {
-  background: linear-gradient(180deg, var(--apex-blue-soft) 0%, var(--apex-bg) 100%);
-  padding: clamp(2.75rem, 6vw, 5.2rem) 1rem clamp(3rem, 6vw, 5.5rem);
-}
-
-.services-overview-content,
-.services-hero-combined .services-overview-content {
-  max-width: 1050px;
-  margin: 0 auto;
-  text-align: center;
-}
-
-.service-area-grid {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  max-width: 1100px;
-  margin: 2rem auto 0;
-}
 
 .services-hero-combined .service-area-grid {
   margin-top: 0;
@@ -742,17 +744,15 @@ footer a {
   width: 150px;
   height: 150px;
   object-fit: contain;
-  margin: 0 auto 1rem;
+  margin: 0 auto 1.1rem;
 }
 
 .services-intro-section {
   background: #ffffff;
-  padding: clamp(2rem, 4vw, 3rem) 1rem;
+  padding: var(--section-pad-sm);
 }
 
-.services-intro-section p,
-.other-services-card p,
-.other-services-section p {
+.services-intro-section p {
   max-width: 720px;
   margin-left: auto;
   margin-right: auto;
@@ -760,11 +760,11 @@ footer a {
 
 .service-detail-section {
   background: var(--apex-bg);
-  padding: clamp(2rem, 4vw, 3rem) 1rem;
+  padding: var(--section-pad-sm);
 }
 
-.services-main .service-detail-section:nth-of-type(4),
-.services-main .service-detail-section:nth-of-type(6) {
+.services-intro-section + .service-detail-section + .service-detail-section,
+.services-intro-section + .service-detail-section + .service-detail-section + .service-detail-section + .service-detail-section {
   background: #ffffff;
 }
 
@@ -798,7 +798,7 @@ footer a {
 
 .service-detail-section .sidepicture-text {
   background: #ffffff;
-  border-radius: 18px;
+  border-radius: var(--radius-card);
   padding: clamp(1.5rem, 3vw, 2rem);
   box-shadow: var(--card-shadow);
 }
@@ -813,9 +813,6 @@ footer a {
 
 .service-detail-section .sidepicture-text h2 {
   margin-top: 0;
-  color: var(--apex-text);
-  font-size: clamp(1.45rem, 2.7vw, 1.9rem);
-  line-height: 1.18;
 }
 
 .service-detail-section .sidepicture-text p,
@@ -823,9 +820,12 @@ footer a {
   line-height: 1.7;
 }
 
-.service-detail-section .sidepicture-text p:first-of-type,
-.service-detail-section .sidepicture-text ul {
+.service-detail-section .sidepicture-text p:first-of-type {
   margin-top: 0;
+}
+
+.service-detail-section .sidepicture-text ul {
+  margin-top: 0.75rem;
 }
 
 .service-detail-section .sidepicture-text li {
@@ -866,7 +866,7 @@ footer a {
 .service-detail-image-wrap {
   width: 500px;
   flex-shrink: 0;
-  border-radius: 18px;
+  border-radius: var(--radius-card);
   overflow: hidden;
   box-shadow: var(--card-shadow);
 }
@@ -876,88 +876,42 @@ footer a {
   width: 100%;
   height: 100%;
   min-height: 100%;
-  margin: 0;
   object-fit: cover;
-  border-radius: 0;
-  box-shadow: none;
 }
 
 .other-services-section {
-  background: var(--apex-bg);
-  padding: clamp(3rem, 6vw, 5rem) 1rem;
+  padding: var(--section-pad);
 }
 
 .other-services-card {
   padding: clamp(1.75rem, 4vw, 2.75rem);
 }
 
-.other-services-card h2 {
-  margin-top: 0;
+.other-services-card p,
+.other-services-section p {
+  max-width: 660px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.7;
 }
 
 /* Testimonials */
-
-.testimonials-hero,
-.publications-hero,
-.contact-hero {
-  background: linear-gradient(180deg, var(--apex-blue-soft) 0%, var(--apex-bg) 100%);
-  padding: clamp(2.75rem, 6vw, 5rem) 1.5rem;
-}
-
-.testimonials-hero h1,
-.publications-hero h1,
-.contact-hero h1 {
-  max-width: 900px;
-}
 
 .testimonial-proof-section {
   background: #ffffff;
   padding: clamp(2.5rem, 5vw, 4rem) 1rem clamp(0.75rem, 1.5vw, 1.25rem);
 }
 
-.testimonial-proof-section h2,
-.testimonials-list-section h2,
-.publication-stats-section h2,
-.publication-themes-section h2,
-.publications-list-intro h2,
-.contact-options-section h2,
-.contact-guidance-section h2,
-.testimonials-cta-section h2 {
-  margin-top: 0;
-}
-
-.testimonial-proof-grid {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  max-width: 1100px;
-  margin: 2rem auto 0;
-}
-
 .testimonial-proof-card {
   background: #ffffff;
-  border: 1px solid var(--apex-border);
-  border-radius: 18px;
-  padding: 1.75rem;
-  box-shadow: var(--card-shadow);
-  text-align: left;
-}
-
-.testimonial-proof-card h3 {
-  text-align: center;
-}
-
-.testimonial-proof-bubble {
-  display: inline-block;
-  margin: 0 0 1rem;
-  text-transform: none;
-  text-align: left;
 }
 
 .testimonial-proof-card p {
   margin: 0;
   padding: 0;
   background: transparent;
-  line-height: 1.65;
   color: var(--apex-text);
+  line-height: 1.65;
 }
 
 .testimonials-photo-section {
@@ -966,36 +920,20 @@ footer a {
 }
 
 .testimonials-wide-photo {
-  display: block;
-  width: 100%;
-  height: clamp(260px, 40vw, 500px);
-  object-fit: cover;
-  object-position: center;
-  border-radius: 18px;
-  box-shadow: var(--card-shadow);
+  height: clamp(220px, 32vw, 400px);
 }
 
 .testimonials-list-section {
   background: var(--apex-bg);
-  padding: clamp(2rem, 4vw, 3rem) 1rem clamp(2.5rem, 5vw, 4rem);
-}
-
-.testimonials-page-grid {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  max-width: 1150px;
-  margin: 2rem auto 0;
+  padding: clamp(2rem, 4vw, 3rem) 1rem var(--section-pad);
 }
 
 .testimonial-page-card {
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
   gap: 1rem;
 }
 
-.featured-testimonial {
-  transform: none;
+.testimonial-page-card footer strong {
+  color: var(--apex-text);
 }
 
 .testimonial-logo-wrap {
@@ -1015,53 +953,19 @@ footer a {
   object-fit: contain;
 }
 
-.testimonial-logo[src*="logo-woodland-trust"] { max-height: 76px; }
-.testimonial-logo[src*="logo-fundacao-principe"] { max-height: 72px; }
-
-.testimonial-page-card p {
-  margin-top: 0;
-  font-size: 1.02rem;
-  font-style: italic;
-}
-
-.testimonial-page-card footer {
-  margin-top: 1.25rem;
-  padding-top: 1rem;
-  border-top: 1px solid #d5e7e8;
-  background: transparent;
-  text-align: left;
-}
-
-.testimonial-page-card footer strong {
-  display: block;
-  color: var(--apex-text);
-  font-size: 1rem;
-}
-
-.testimonial-page-card footer span {
-  display: block;
-  margin-top: 0.2rem;
-  color: var(--apex-muted-blue);
-  font-size: 0.95rem;
-  line-height: 1.4;
-}
-
 .testimonials-cta-section.site-cta-section {
   background: linear-gradient(180deg, #ffffff 0%, #eef6ef 100%);
-  border-top: 1px solid rgba(63, 130, 133, 0.14);
+}
+
+.testimonials-cta-card {
+  background: #ffffff;
 }
 
 /* Publications */
 
 .publication-stats-section {
   background: #ffffff;
-  padding: clamp(2.5rem, 5vw, 4rem) 1rem;
-}
-
-.publication-stats-grid {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  max-width: 1100px;
-  margin: 2rem auto 0;
+  padding: var(--section-pad);
 }
 
 .publication-stat-card {
@@ -1069,10 +973,6 @@ footer a {
   flex-direction: column;
   justify-content: flex-start;
   background: var(--apex-blue-soft);
-  border: 1px solid var(--apex-border);
-  border-radius: 18px;
-  padding: 1.75rem;
-  box-shadow: var(--card-shadow);
   text-align: center;
 }
 
@@ -1087,7 +987,6 @@ footer a {
   font-size: clamp(2rem, 4vw, 3rem);
   line-height: 1;
   font-weight: 800;
-  text-align: center;
 }
 
 .publication-stat-label {
@@ -1113,13 +1012,7 @@ footer a {
 
 .publication-themes-section {
   background: var(--apex-bg);
-  padding: clamp(2.5rem, 5vw, 4rem) 1rem clamp(1.25rem, 2.5vw, 2rem);
-}
-
-.publication-theme-grid {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  max-width: 1100px;
-  margin: 2rem auto 0;
+  padding: var(--section-pad);
 }
 
 .publication-theme-grid-featured {
@@ -1136,12 +1029,30 @@ footer a {
 .publication-theme-card {
   display: flex;
   flex-direction: column;
-  background: #ffffff;
   border: 1px solid var(--apex-border);
-  border-radius: 18px;
   padding: 1.6rem 1.45rem 1.45rem;
-  box-shadow: var(--card-shadow);
-  text-align: left;
+}
+
+.publication-theme-bubble {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  min-height: 2.25rem;
+  margin-left: auto;
+  margin-right: auto;
+  color: var(--apex-blue);
+  font-size: 0.95rem;
+}
+
+.publication-theme-bubble a {
+  display: inline-block;
+  color: inherit;
+  text-decoration: none;
+}
+
+.publication-theme-bubble a:hover {
+  text-decoration: underline;
 }
 
 .publication-theme-icon-link {
@@ -1162,50 +1073,18 @@ footer a {
   transform: translateY(-2px);
 }
 
-.publication-theme-bubble {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  align-self: center;
-  min-height: 2.25rem;
-  margin: 0 auto 1rem;
-  text-align: center;
-}
-
-.publication-theme-bubble a {
-  display: inline-block;
-  color: inherit;
-  text-decoration: none;
-}
-
-.publication-theme-bubble a:hover {
-  text-decoration: underline;
-}
-
-.publication-theme-card p {
-  margin: 0;
-  color: var(--apex-text);
-  line-height: 1.6;
-}
-
 .publications-strip-section {
   background: var(--apex-bg);
   padding: 0 1rem clamp(2rem, 4vw, 3rem);
 }
 
 .publications-strip-image {
-  display: block;
-  width: 100%;
   height: clamp(150px, 18vw, 240px);
-  object-fit: cover;
-  object-position: center;
-  border-radius: 18px;
-  box-shadow: var(--card-shadow);
 }
 
 .publications-list-intro {
   background: #ffffff;
-  padding: clamp(2rem, 4vw, 3rem) 1rem;
+  padding: var(--section-pad-sm);
 }
 
 .publications-list-intro p {
@@ -1216,27 +1095,25 @@ footer a {
 
 .publication-category-section {
   background: var(--apex-bg);
-  padding: clamp(2.5rem, 5vw, 4rem) 1rem;
+  padding: var(--section-pad);
 }
 
+/* Alternate the publication lists from “Selected work” onwards.
+   This avoids nth-of-type, which breaks when extra sections are added above. */
 .publications-list-intro + .publication-category-section + .publication-category-section,
-.publications-list-intro + .publication-category-section + .publication-category-section + .publication-category-section + .publication-category-section,
-.publications-list-intro + .publication-category-section + .publication-category-section + .publication-category-section + .publication-category-section + .publication-category-section + .publication-category-section {
+.publications-list-intro + .publication-category-section + .publication-category-section + .publication-category-section + .publication-category-section {
   background: #ffffff;
 }
 
 .publication-category-section .publications-box {
   max-width: 1000px;
   margin: 0 auto;
-  background: #ffffff;
-  border: 1px solid rgba(63, 130, 133, 0.12);
-  border-radius: 18px;
+  border: 1px solid var(--apex-border-soft);
   padding: clamp(1.5rem, 3vw, 2rem);
-  box-shadow: var(--card-shadow);
 }
 
-.publication-category-section .publications-box h2,
-.publication-section-heading {
+.publications-box h2,
+.publication-category-section .publications-box h2 {
   margin-top: 0;
   color: var(--apex-text);
 }
@@ -1255,13 +1132,12 @@ footer a {
 }
 
 .publication-list {
-  padding-left: 1.25rem;
   margin: 1.5rem 0 0;
+  padding-left: 1.25rem;
 }
 
 .publication-list li {
   margin-bottom: 0.95rem;
-  line-height: 1.7;
 }
 
 .publication-list li:last-child {
@@ -1281,11 +1157,6 @@ footer a {
   color: var(--apex-text);
 }
 
-.publications-cta-section.site-cta-section {
-  background: linear-gradient(180deg, #ffffff 0%, #eef6ef 100%);
-  border-top: 1px solid rgba(63, 130, 133, 0.14);
-}
-
 .publications-cta-card p {
   max-width: 680px;
   margin-left: auto;
@@ -1295,27 +1166,15 @@ footer a {
 /* Contact */
 
 .contact-options-section {
-  background: #ffffff;
-  padding: clamp(2.5rem, 5vw, 4rem) 1rem;
-}
-
-.contact-options-grid {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  max-width: 900px;
-  margin: 2rem auto 0;
+  padding: var(--section-pad);
 }
 
 .contact-option-card {
-  background: var(--apex-blue-soft);
-  border: 1px solid var(--apex-border);
-  border-radius: 18px;
-  padding: 1.75rem;
-  box-shadow: var(--card-shadow);
   text-align: center;
 }
 
-.contact-option-icon {
-  display: block;
+.contact-option-icon,
+.contact-option-icon-link img {
   width: 46px;
   height: 46px;
   object-fit: contain;
@@ -1330,7 +1189,6 @@ footer a {
   max-width: 420px;
   margin-left: auto;
   margin-right: auto;
-  line-height: 1.7;
 }
 
 .contact-link-line {
@@ -1351,7 +1209,7 @@ footer a {
 
 .contact-guidance-section {
   background: var(--apex-bg);
-  padding: clamp(2.5rem, 5vw, 4rem) 1rem;
+  padding: var(--section-pad);
 }
 
 .contact-guidance-intro {
@@ -1367,7 +1225,7 @@ footer a {
   list-style: none;
   background: #ffffff;
   border: 1px solid var(--apex-border);
-  border-radius: 18px;
+  border-radius: var(--radius-card);
   box-shadow: var(--card-shadow);
   text-align: left;
   line-height: 1.7;
@@ -1407,7 +1265,7 @@ footer a {
 
 .contact-reassurance-section {
   background: #ffffff;
-  padding: clamp(2.5rem, 5vw, 4rem) 1rem;
+  padding: var(--section-pad);
 }
 
 .contact-reassurance-card {
@@ -1416,15 +1274,10 @@ footer a {
   padding: clamp(1.75rem, 4vw, 2.5rem);
 }
 
-.contact-reassurance-card h2 {
-  margin-top: 0;
-}
-
 .contact-reassurance-card p {
   max-width: 680px;
   margin-left: auto;
   margin-right: auto;
-  line-height: 1.7;
 }
 
 /* Responsive */
@@ -1454,16 +1307,13 @@ footer a {
   .publication-stats-grid,
   .publication-theme-grid,
   .testimonial-proof-grid,
-  .testimonials-page-grid,
-  .testimonials-image-layout {
+  .testimonials-page-grid {
     grid-template-columns: 1fr;
     max-width: 650px;
   }
 
   .publication-theme-card-featured {
-    grid-column: auto;
-    width: auto;
-    justify-self: stretch;
+    width: 100%;
   }
 
   .sidepicture-section,
@@ -1488,8 +1338,7 @@ footer a {
     max-width: 560px;
   }
 
-  .service-detail-image-wrap .sidepicture-image,
-  .testimonials-feature-image {
+  .service-detail-image-wrap .sidepicture-image {
     height: auto;
     min-height: 0;
   }
@@ -1532,9 +1381,6 @@ footer a {
 
 @media (max-width: 640px) {
   header {
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
     padding: 0.5rem 1rem;
   }
 
@@ -1547,7 +1393,6 @@ footer a {
     flex-direction: column;
     align-items: flex-end;
     justify-content: center;
-    flex-wrap: nowrap;
     gap: 0.15rem;
   }
 
@@ -1570,6 +1415,7 @@ footer a {
 
   .home-hero h1,
   .services-hero h1,
+  .services-hero-combined h1,
   .testimonials-hero h1,
   .publications-hero h1,
   .contact-hero h1 {
@@ -1578,6 +1424,7 @@ footer a {
 
   .home-hero-text,
   .services-hero-text,
+  .services-hero-combined .services-hero-text,
   .testimonials-hero-text,
   .publications-hero-text,
   .contact-hero-text {
@@ -1593,8 +1440,7 @@ footer a {
     text-align: center;
   }
 
-  .partner-logo-list,
-  .contact-options-grid {
+  .partner-logo-list {
     grid-template-columns: 1fr;
   }
 
@@ -1641,23 +1487,19 @@ footer a {
   .overview-point,
   .home-photo,
   .final-cta-card,
+  .site-cta-card,
   .service-area-card,
   .service-detail-section .sidepicture-text,
   .other-services-card,
   .testimonial-proof-card,
   .testimonial-page-card,
-  .testimonials-image-copy,
   .publication-stat-card,
   .publication-theme-card,
-  .publication-category-section .publications-box,
   .publications-box,
-  .publications-cta-card,
-  .testimonials-cta-card,
-  .site-cta-card,
   .contact-option-card,
   .contact-guidance-list,
   .contact-reassurance-card {
-    border-radius: 14px;
+    border-radius: var(--radius-mobile);
     padding: 1.25rem;
   }
 
@@ -1666,9 +1508,9 @@ footer a {
     margin-right: 0;
   }
 
-  .service-area-bubble {
-    margin-left: auto;
-    margin-right: auto;
+  .service-detail-title {
+    border-radius: var(--radius-card);
+    align-items: flex-start;
   }
 
   .service-area-icon {
@@ -1676,17 +1518,8 @@ footer a {
     height: 115px;
   }
 
-  .service-detail-title {
-    border-radius: 18px;
-    align-items: flex-start;
-  }
-
   .testimonial-logo {
     max-width: 160px;
-  }
-
-  .testimonial-logo-wrap {
-    justify-content: flex-start;
   }
 
   .publication-stat-card .credibility-number,
