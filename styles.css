@@ -3203,3 +3203,25 @@ html {
     height: 52px;
   }
 }
+
+/* Publications image strip */
+
+.publications-strip-section {
+  background: var(--apex-bg);
+  padding: 0 1rem clamp(2rem, 4vw, 3rem);
+}
+
+.publications-strip-section .container-lg {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.publications-strip-image {
+  display: block;
+  width: 100%;
+  height: clamp(150px, 18vw, 240px);
+  object-fit: cover;
+  object-position: center;
+  border-radius: 18px;
+  box-shadow: var(--card-shadow);
+}
