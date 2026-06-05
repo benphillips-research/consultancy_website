@@ -3225,3 +3225,9 @@ html {
   border-radius: 18px;
   box-shadow: var(--card-shadow);
 }
+
+/* Testimonials proof cards */
+
+.testimonial-proof-card h3 {
+  text-align: center;
+}
