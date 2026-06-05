@@ -282,7 +282,28 @@ footer a { color: #ffffff; }
 .site-cta-card {
   background: var(--apex-bg);
   border: 1px solid var(--apex-border);
-  padding: clamp(1.75rem, 4vw, 2.5rem);
+}
+
+.site-cta-section > .container-md.site-cta-card {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: clamp(2.25rem, 5vw, 3.4rem);
+  border-radius: 28px;
+  background: linear-gradient(180deg, #fbfdfb 0%, var(--apex-bg) 100%);
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.07);
+  position: relative;
+  overflow: hidden;
+}
+
+.site-cta-section > .container-md.site-cta-card::before {
+  content: "";
+  display: block;
+  width: 68px;
+  height: 4px;
+  margin: 0 auto 1.25rem;
+  border-radius: 999px;
+  background: var(--apex-blue);
+  opacity: 0.78;
 }
 
 .site-cta-card h2,
@@ -1126,6 +1147,11 @@ footer a { color: #ffffff; }
   .service-detail-section .sidepicture-text {
     border-radius: var(--radius-mobile);
     padding: 1.25rem;
+  }
+
+  .site-cta-section > .container-md.site-cta-card {
+    border-radius: 22px;
+    padding: 1.75rem 1.35rem;
   }
 
   .overview-point-bubble {
