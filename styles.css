@@ -507,7 +507,9 @@ footer a { color: #ffffff; }
 .home-hero-visual-image,
 .publications-strip-image { height: clamp(150px, 18vw, 240px); }
 .home-hero-visual-image { object-position: right center; }
-.home-earth-image { height: clamp(260px, 38vw, 460px); }
+.home-earth-image {
+  height: clamp(210px, 30vw, 370px);
+}
 
 .credibility-section h2.home-section-heading {
   margin-bottom: 0.65rem;
