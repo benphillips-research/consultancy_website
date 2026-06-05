@@ -351,11 +351,11 @@ footer a { color: #ffffff; }
 
 .partner-strip,
 .home-photo-section,
-.people-preview-section,
-.testimonial-preview-section { background: #ffffff; }
+.people-preview-section { background: #ffffff; }
 
 .home-overview-section,
 .credibility-section,
+.testimonial-preview-section,
 .home-hero-visual,
 .home-earth-section,
 .final-cta-section { background: var(--apex-bg); }
@@ -787,10 +787,13 @@ footer a { color: #ffffff; }
 
 .publication-stats-section,
 .publications-list-intro { background: #ffffff; }
+
 .publication-themes-section,
 .publications-strip-section,
 .publication-category-section { background: var(--apex-bg); }
+
 .publication-themes-section { padding: var(--section-pad); }
+.publication-category-section { padding: var(--section-pad-sm); }
 
 .publication-stat-card {
   display: flex;
