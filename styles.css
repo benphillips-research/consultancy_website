@@ -1102,7 +1102,7 @@ footer a { color: #ffffff; }
 
 @media (max-width: 700px) {
   .home-hero-inline-image {
-    height: clamp(140px, 36vw, 210px);
+    height: clamp(135px, 34vw, 195px);
   }
 
   .home-earth-image { height: auto; }
