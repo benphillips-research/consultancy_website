@@ -198,8 +198,8 @@ footer a { color: #ffffff; }
 }
 
 .home-hero {
-  padding-top: clamp(2rem, 4vw, 3.25rem);
-  padding-bottom: clamp(2.5rem, 5vw, 4rem);
+  padding-top: clamp(1.4rem, 3vw, 2.4rem);
+  padding-bottom: clamp(2rem, 4vw, 3.25rem);
 }
 
 .home-hero-inner,
@@ -397,7 +397,7 @@ footer a { color: #ffffff; }
 .home-hero-image-title-wrap {
   position: relative;
   max-width: 1050px;
-  margin: clamp(0.9rem, 2vw, 1.35rem) auto clamp(1.35rem, 2.6vw, 2rem);
+  margin: clamp(0.75rem, 1.6vw, 1.1rem) auto clamp(1rem, 2vw, 1.5rem);
   border-radius: var(--radius-card);
   overflow: hidden;
   box-shadow: var(--card-shadow);
