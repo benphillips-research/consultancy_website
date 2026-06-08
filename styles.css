@@ -198,8 +198,48 @@ footer a { color: #ffffff; }
 }
 
 .home-hero {
-  padding-top: clamp(2rem, 4.5vw, 3.6rem);
-  padding-bottom: clamp(2rem, 4.5vw, 3.6rem);
+  padding: clamp(2.75rem, 5vw, 4.5rem) 1.5rem;
+}
+
+.home-hero-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(360px, 1.05fr);
+  gap: clamp(2rem, 5vw, 4rem);
+  align-items: center;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.home-hero-copy {
+  text-align: left;
+}
+
+.home-hero-copy .home-kicker {
+  margin-bottom: 1.1rem;
+}
+
+.home-hero h1 {
+  max-width: 720px;
+  margin: 0 0 1.25rem;
+}
+
+.home-hero-text {
+  max-width: 680px;
+  margin: 0;
+}
+
+.home-hero-image-wrap {
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: var(--card-shadow);
+}
+
+.home-hero-image {
+  display: block;
+  width: 100%;
+  height: clamp(360px, 34vw, 520px);
+  object-fit: cover;
+  object-position: right center;
 }
 
 .home-hero-inner,
@@ -382,23 +422,14 @@ footer a { color: #ffffff; }
 .home-overview-section,
 .credibility-section,
 .testimonial-preview-section,
-.home-hero-visual,
 .home-earth-section { background: var(--apex-bg); }
 
 .home-hero-actions {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 1rem;
   margin-top: 2rem;
   flex-wrap: wrap;
-}
-
-.home-hero-mark {
-  display: block;
-  width: clamp(28px, 3vw, 40px);
-  height: auto;
-  margin: 0 auto 0.45rem;
-  opacity: 0.9;
 }
 
 .partner-strip { padding: 2rem 1rem; }
@@ -489,7 +520,6 @@ footer a { color: #ffffff; }
 
 .home-photo-grid .home-photo,
 .home-earth-image,
-.home-hero-visual-image,
 .testimonials-wide-photo,
 .publications-strip-image {
   display: block;
@@ -503,11 +533,9 @@ footer a { color: #ffffff; }
 .home-photo-grid .home-photo { height: 100%; }
 .home-photo-grid .home-photo-large { grid-row: span 2; }
 
-.home-hero-visual,
 .home-earth-section,
 .publications-strip-section { padding: 0 1rem clamp(2rem, 4vw, 3rem); }
 
-.home-hero-visual .container-lg,
 .home-earth-section .container-lg,
 .testimonials-photo-section .container-lg,
 .publications-strip-section .container-lg {
@@ -515,9 +543,8 @@ footer a { color: #ffffff; }
   margin-bottom: 0;
 }
 
-.home-hero-visual-image,
 .publications-strip-image { height: clamp(150px, 18vw, 240px); }
-.home-hero-visual-image { object-position: right center; }
+
 .home-earth-image {
   height: clamp(210px, 30vw, 370px);
 }
@@ -1057,6 +1084,29 @@ footer a { color: #ffffff; }
 }
 
 @media (max-width: 900px) {
+  .home-hero-layout {
+    grid-template-columns: 1fr;
+    max-width: 720px;
+  }
+
+  .home-hero-copy {
+    text-align: center;
+  }
+
+  .home-hero h1,
+  .home-hero-text {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .home-hero-actions {
+    justify-content: center;
+  }
+
+  .home-hero-image {
+    height: clamp(220px, 45vw, 340px);
+  }
+
   .grid-3,
   .grid-2 {
     grid-template-columns: 1fr;
