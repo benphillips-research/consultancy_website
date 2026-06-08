@@ -198,48 +198,46 @@ footer a { color: #ffffff; }
 }
 
 .home-hero {
-  padding: clamp(2.75rem, 5vw, 4.5rem) 1.5rem;
+  padding: clamp(3rem, 6vw, 5rem) 1.5rem;
 }
 
-.home-hero-layout {
-  display: grid;
-  grid-template-columns: minmax(0, 0.95fr) minmax(360px, 1.05fr);
-  gap: clamp(2rem, 5vw, 4rem);
-  align-items: center;
+.home-hero-image-led {
+  background:
+    linear-gradient(
+      90deg,
+      rgba(245, 248, 245, 0.96) 0%,
+      rgba(245, 248, 245, 0.9) 42%,
+      rgba(245, 248, 245, 0.35) 100%
+    ),
+    url("images/horizon.jpg");
+  background-size: cover;
+  background-position: right center;
+}
+
+.home-hero-panel {
+  max-width: 760px;
   margin-top: 0;
   margin-bottom: 0;
-}
-
-.home-hero-copy {
+  margin-left: clamp(1rem, 5vw, 4rem);
+  margin-right: auto;
+  padding: clamp(1.75rem, 4vw, 2.75rem);
+  border-radius: 28px;
+  background: rgba(255, 255, 255, 0.88);
+  border: 1px solid var(--apex-border);
+  box-shadow: var(--card-shadow);
   text-align: left;
 }
 
-.home-hero-copy .home-kicker {
-  margin-bottom: 1.1rem;
-}
-
-.home-hero h1 {
-  max-width: 720px;
+.home-hero-panel h1 {
   margin: 0 0 1.25rem;
+  color: var(--apex-text);
+  font-size: clamp(1.9rem, 4vw, 3rem);
+  line-height: 1.12;
 }
 
-.home-hero-text {
-  max-width: 680px;
+.home-hero-panel .home-hero-text {
   margin: 0;
-}
-
-.home-hero-image-wrap {
-  border-radius: 24px;
-  overflow: hidden;
-  box-shadow: var(--card-shadow);
-}
-
-.home-hero-image {
-  display: block;
-  width: 100%;
-  height: clamp(360px, 34vw, 520px);
-  object-fit: cover;
-  object-position: right center;
+  max-width: 680px;
 }
 
 .home-hero-inner,
@@ -1084,27 +1082,27 @@ footer a { color: #ffffff; }
 }
 
 @media (max-width: 900px) {
-  .home-hero-layout {
-    grid-template-columns: 1fr;
+  .home-hero-image-led {
+    background:
+      linear-gradient(
+        180deg,
+        rgba(245, 248, 245, 0.88) 0%,
+        rgba(245, 248, 245, 0.98) 100%
+      ),
+      url("images/horizon.jpg");
+    background-size: cover;
+    background-position: right center;
+  }
+
+  .home-hero-panel {
     max-width: 720px;
-  }
-
-  .home-hero-copy {
-    text-align: center;
-  }
-
-  .home-hero h1,
-  .home-hero-text {
     margin-left: auto;
     margin-right: auto;
+    text-align: center;
   }
 
   .home-hero-actions {
     justify-content: center;
-  }
-
-  .home-hero-image {
-    height: clamp(220px, 45vw, 340px);
   }
 
   .grid-3,
