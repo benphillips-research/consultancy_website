@@ -392,11 +392,13 @@ footer a { color: #ffffff; }
   margin-top: 2rem;
   flex-wrap: wrap;
 }
+
 .home-hero-mark {
   display: block;
-  width: clamp(38px, 5vw, 58px);
+  width: clamp(28px, 3vw, 40px);
   height: auto;
-  margin: 0 auto 0.75rem;
+  margin: 0 auto 0.45rem;
+  opacity: 0.9;
 }
 
 .partner-strip { padding: 2rem 1rem; }
