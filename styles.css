@@ -406,7 +406,7 @@ footer a { color: #ffffff; }
 .home-hero-title-image {
   display: block;
   width: 100%;
-  height: clamp(240px, 24vw, 340px);
+  height: clamp(216px, 21.6vw, 306px);
   object-fit: cover;
   object-position: right center;
 }
@@ -1095,8 +1095,8 @@ footer a { color: #ffffff; }
 
 @media (max-width: 900px) {
   .home-hero-title-image {
-    height: clamp(220px, 42vw, 300px);
-  }
+  height: clamp(198px, 37.8vw, 270px);
+}
 
   .home-hero-image-title-wrap h1 {
   font-size: clamp(1.25rem, 4.2vw, 1.85rem);
