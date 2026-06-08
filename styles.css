@@ -199,7 +199,7 @@ footer a { color: #ffffff; }
 
 .home-hero {
   padding-top: clamp(2rem, 4vw, 3.25rem);
-  padding-bottom: clamp(2.25rem, 4.5vw, 3.75rem);
+  padding-bottom: clamp(2.5rem, 5vw, 4rem);
 }
 
 .home-hero-inner,
@@ -389,10 +389,9 @@ footer a { color: #ffffff; }
   display: flex;
   justify-content: center;
   gap: 1rem;
-  margin-top: 2rem;
+  margin-top: 1.4rem;
   flex-wrap: wrap;
 }
-
 
 .partner-strip { padding: 2rem 1rem; }
 
@@ -1051,6 +1050,22 @@ footer a { color: #ffffff; }
 }
 
 @media (max-width: 900px) {
+  .home-hero-inline-image {
+    height: clamp(260px, 45vw, 360px);
+  }
+
+  .home-hero-image-card {
+    position: static;
+    max-width: none;
+    margin: 0;
+    border-radius: 0;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 0;
+    box-shadow: none;
+    background: #ffffff;
+  }
+
   .grid-3,
   .grid-2 {
     grid-template-columns: 1fr;
@@ -1102,7 +1117,7 @@ footer a { color: #ffffff; }
 
 @media (max-width: 700px) {
   .home-hero-inline-image {
-    height: clamp(135px, 34vw, 195px);
+    height: clamp(180px, 44vw, 260px);
   }
 
   .home-earth-image { height: auto; }
@@ -1146,6 +1161,11 @@ footer a { color: #ffffff; }
   }
 
   .home-hero-actions .button { text-align: center; }
+
+  .home-hero-image-card {
+    padding: 1.25rem;
+  }
+
   .partner-logo-list { grid-template-columns: 1fr; }
   .partner-logo-card { min-height: 96px; }
   .partner-logo-card:last-child { grid-column: auto; }
