@@ -198,8 +198,8 @@ footer a { color: #ffffff; }
 }
 
 .home-hero {
-  padding-top: clamp(2.25rem, 4.5vw, 3.75rem);
-  padding-bottom: clamp(4.5rem, 8vw, 6.5rem);
+  padding-top: clamp(2rem, 4vw, 3.25rem);
+  padding-bottom: clamp(2.25rem, 4.5vw, 3.75rem);
 }
 
 .home-hero-inner,
@@ -483,6 +483,7 @@ footer a { color: #ffffff; }
 .home-photo-grid .home-photo,
 .home-earth-image,
 .home-hero-visual-image,
+.home-hero-inline-image,
 .testimonials-wide-photo,
 .publications-strip-image {
   display: block;
@@ -496,18 +497,10 @@ footer a { color: #ffffff; }
 .home-photo-grid .home-photo { height: 100%; }
 .home-photo-grid .home-photo-large { grid-row: span 2; }
 
-.home-hero-visual {
-  background: var(--apex-bg);
-  padding: 0 1rem clamp(2rem, 4vw, 3rem);
-  margin-top: clamp(-4.5rem, -6vw, -3rem);
-  position: relative;
-  z-index: 2;
-}
-
+.home-hero-visual,
 .home-earth-section,
 .publications-strip-section { padding: 0 1rem clamp(2rem, 4vw, 3rem); }
 
-.home-hero-visual .container-lg,
 .home-hero-visual .container-lg,
 .home-earth-section .container-lg,
 .testimonials-photo-section .container-lg,
@@ -516,14 +509,8 @@ footer a { color: #ffffff; }
   margin-bottom: 0;
 }
 
-.home-hero-visual-image {
-  height: clamp(170px, 19vw, 260px);
-}
-
-.publications-strip-image {
-  height: clamp(150px, 18vw, 240px);
-}
-
+.home-hero-visual-image,
+.publications-strip-image { height: clamp(150px, 18vw, 240px); }
 .home-hero-visual-image { object-position: right center; }
 .home-earth-image {
   height: clamp(210px, 30vw, 370px);
@@ -1114,6 +1101,10 @@ footer a { color: #ffffff; }
 }
 
 @media (max-width: 700px) {
+  .home-hero-inline-image {
+    height: clamp(140px, 36vw, 210px);
+  }
+
   .home-earth-image { height: auto; }
 }
 
