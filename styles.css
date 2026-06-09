@@ -1191,6 +1191,12 @@ footer a { color: #ffffff; }
   .section-kicker { font-size: 0.82rem; }
   .page-hero h1 { font-size: clamp(1.9rem, 8.5vw, 2.55rem); }
 
+  .home-hero-image-title-wrap h1 {
+  font-size: clamp(1.05rem, 5.8vw, 1.45rem);
+  line-height: 1.12;
+  width: calc(100% - 1.25rem);
+}
+
   .home-hero-text,
   .services-hero-text,
   .testimonials-hero-text,
