@@ -95,44 +95,62 @@ nav a:hover { text-decoration: underline; }
 footer {
   background: var(--apex-blue);
   color: #ffffff;
-  text-align: center;
-  padding: 1.75rem 1rem 1.35rem;
+  padding: 1.15rem 1.5rem 0.9rem;
   font-size: 0.9rem;
 }
 
-footer p { margin: 0.35rem 0; }
+footer p { margin: 0; }
 footer a { color: #ffffff; }
 
+.footer-inner {
+  max-width: 1150px;
+  margin: 0 auto 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
 .footer-brand {
-  margin-bottom: 0.85rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-align: left;
 }
 
 .footer-logo {
   display: block;
   width: auto;
-  height: 70px;
-  margin: 0 auto 0.35rem;
+  height: 46px;
+}
+
+.footer-name {
+  font-weight: 750;
+  line-height: 1.25;
 }
 
 .footer-tagline {
-  margin: 0;
-  color: #ffffff;
-  font-size: 0.98rem;
-  font-weight: 700;
-  letter-spacing: 0.02em;
+  margin-top: 0.15rem;
+  font-size: 0.88rem;
+  line-height: 1.35;
+  opacity: 0.9;
 }
 
-.footer-contact { margin: 0 0 0.5rem; }
+.footer-contact {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-shrink: 0;
+}
 
 .footer-icon {
   display: inline-block;
-  width: 45px;
-  height: 45px;
-  margin: 0 0.5rem;
+  width: 30px;
+  height: 30px;
   background-size: auto 100%;
   background-repeat: no-repeat;
   background-position: center;
-  opacity: 0.95;
+  opacity: 0.92;
   filter: brightness(0) invert(1);
   transition: opacity 0.2s ease;
 }
@@ -140,6 +158,17 @@ footer a { color: #ffffff; }
 .footer-icon:hover { opacity: 1; }
 .footer-icon.email { background-image: url('images/email.png'); }
 .footer-icon.linkedin { background-image: url('images/linkedin.png'); }
+
+.footer-copyright {
+  max-width: 1150px;
+  margin: 0 auto;
+  padding-top: 0.65rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.22);
+  text-align: center;
+  font-size: 0.8rem;
+  line-height: 1.4;
+  opacity: 0.88;
+}
 
 /* Shared typography */
 
@@ -1202,6 +1231,31 @@ footer a { color: #ffffff; }
     padding: 0.1rem 0;
     line-height: 1.2;
     font-size: 0.95rem;
+  }
+
+  footer {
+    padding: 1.25rem 1rem 1rem;
+  }
+
+  .footer-inner {
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .footer-brand {
+    flex-direction: column;
+    gap: 0.45rem;
+    text-align: center;
+  }
+
+  .footer-logo {
+    height: 44px;
+  }
+
+  .footer-contact {
+    justify-content: center;
   }
 
   .home-section-heading,
