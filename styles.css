@@ -1278,9 +1278,10 @@ footer a { color: #ffffff; }
   .contact-hero-text { font-size: 0.98rem; }
 
   .home-hero-actions {
-    flex-direction: column;
-    align-items: stretch;
-  }
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0.5rem;
+}
 
   .home-hero-actions .button { text-align: center; }
   .partner-logo-list { grid-template-columns: 1fr; }
